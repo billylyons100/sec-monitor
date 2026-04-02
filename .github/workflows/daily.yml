@@ -30,3 +30,10 @@ jobs:
 
       - name: Run script
         run: python main.py
+      - name: Commit updated snapshot
+        run: |
+          git config --global user.name "automation-bot"
+          git config --global user.email "bot@example.com"
+          git add filtered_snapshot.json
+          git commit -m "Update snapshot" || echo "No changes"
+          git push
