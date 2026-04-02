@@ -4,6 +4,9 @@ import json
 if not os.path.exists("filtered_snapshot.json"):
     with open("filtered_snapshot.json", "w") as f:
         json.dump({"initialized": True}, f)
+        print("SNAPSHOT FILE CREATED")
+import os
+print("FILES IN DIRECTORY:", os.listdir())
 import time
 import smtplib
 import logging
