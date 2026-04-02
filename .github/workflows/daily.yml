@@ -34,6 +34,7 @@ jobs:
         run: |
           git config --global user.name "automation-bot"
           git config --global user.email "bot@example.com"
-          git add filtered_snapshot.json
+          git add -A
+          git status
           git commit -m "Update snapshot" || echo "No changes"
           git push
