@@ -3,7 +3,7 @@ import json
 
 if not os.path.exists("filtered_snapshot.json"):
     with open("filtered_snapshot.json", "w") as f:
-        json.dump([], f)
+        json.dump({"initialized": True}, f)
 import time
 import smtplib
 import logging
