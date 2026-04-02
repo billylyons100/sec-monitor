@@ -724,7 +724,7 @@ def main() -> None:
     log.info("=" * 60)
 
     log.info("Entering main loop — checking time every 60 seconds.")
-
+    _one_pass()
 
 
 
