@@ -4,6 +4,9 @@ on:
   workflow_dispatch:
   schedule:
     - cron: "17 6 * * *"   # 2:17 AM Eastern (approx)
+    
+    permissions:
+  contents: write
 
 jobs:
   run-script:
