@@ -1,0 +1,32 @@
+name: Daily SEC Monitor
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: "17 6 * * *"   # 2:17 AM Eastern (approx)
+
+jobs:
+  run-script:
+    runs-on: ubuntu-latest
+
+    env:
+      SEC_API_KEY: ${{ secrets.SEC_API_KEY }}
+      EMAIL_SENDER: ${{ secrets.EMAIL_SENDER }}
+      EMAIL_PASSWORD: ${{ secrets.EMAIL_PASSWORD }}
+      EMAIL_RECIPIENT: ${{ secrets.EMAIL_RECIPIENT }}
+
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Install packages
+        run: |
+          pip install requests
+
+      - name: Run script
+        run: python main.py
