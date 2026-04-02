@@ -725,22 +725,7 @@ def main() -> None:
 
     log.info("Entering main loop — checking time every 60 seconds.")
 
-    while True:
-        now = datetime.now(EASTERN)
-        log.info("Heartbeat: %s", now.strftime("%Y-%m-%d %H:%M:%S %Z"))
 
-        target = now.replace(hour=2, minute=0, second=0, microsecond=0)
-        if 0 <= (now - target).total_seconds() < 120 and now.date() != last_scan_date:
-            log.info("━" * 60)
-            log.info("02:00 AM Eastern reached — starting daily scan …")
-            try:
-                _one_pass()
-            except Exception:
-                log.exception("Unexpected error during scan — will retry tomorrow.")
-            last_scan_date = now.date()
-            log.info("Scan complete. Next scan: tomorrow at 02:00 AM Eastern.")
-
-        time.sleep(60)
 
 
 def _keep_alive() -> None:
