@@ -1,45 +1,58 @@
-name: Daily SEC Monitor
+name: SEC Firm Monitor
 
 on:
-  workflow_dispatch:
   schedule:
-    - cron: "17 6 * * *"   # 2:17 AM Eastern (approx)
-    
+    - cron: "17 6 * * *"
+  workflow_dispatch:
+
 permissions:
-  contents: write
+  contents: write  # Required for pushing back to repo
 
 jobs:
-  run-script:
+  run-monitor:
     runs-on: ubuntu-latest
 
-    env:
-      SEC_API_KEY: ${{ secrets.SEC_API_KEY }}
-      EMAIL_SENDER: ${{ secrets.EMAIL_SENDER }}
-      EMAIL_PASSWORD: ${{ secrets.EMAIL_PASSWORD }}
-      EMAIL_RECIPIENT: ${{ secrets.EMAIL_RECIPIENT }}
-
     steps:
-      - name: Checkout repo
+      # ✅ FIX 1: Full clone + explicit branch checkout
+      - name: Checkout repository
         uses: actions/checkout@v4
+        with:
+          fetch-depth: 0        # Full history — enables clean rebase
+          ref: main             # Explicitly checkout main, avoids detached HEAD
 
-      - name: Setup Python
+      # ✅ FIX 2: Configure git identity for the commit
+      - name: Configure Git
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+
+      - name: Set up Python
         uses: actions/setup-python@v5
         with:
           python-version: "3.11"
 
-      - name: Install packages
-        run: |
-          pip install requests
+      - name: Install dependencies
+        run: pip install -r requirements.txt
 
-      - name: Run script
+      - name: Run monitoring script
         run: python main.py
+
+      # ✅ FIX 3: Pull latest remote state before committing, then push
       - name: Commit and push updated snapshot
         run: |
-          git config user.name "github-actions"
-          git config user.email "github-actions@github.com"
+          git add filtered_snapshot.json
 
-          git add -A
-          git commit -m "Update snapshot" || echo "No changes"
+          # Only commit if there are actual changes
+          if git diff --cached --quiet; then
+            echo "No changes to filtered_snapshot.json — skipping commit."
+            exit 0
+          fi
 
+          git commit -m "chore: update filtered_snapshot.json [$(date -u '+%Y-%m-%d %H:%M UTC')]"
+
+          # ✅ FIX 4: Pull with rebase AFTER committing locally, before pushing
+          # This handles any commits made to remote between our checkout and now
           git pull --rebase origin main
+
+          # Push to main
           git push origin main
