@@ -6,25 +6,19 @@ on:
   workflow_dispatch:
 
 permissions:
-  contents: write  # Required for pushing back to repo
+  contents: write
 
 jobs:
   run-monitor:
     runs-on: ubuntu-latest
 
     steps:
-      # ✅ FIX 1: Full clone + explicit branch checkout
       - name: Checkout repository
         uses: actions/checkout@v4
         with:
-          fetch-depth: 0        # Full history — enables clean rebase
-          ref: main             # Explicitly checkout main, avoids detached HEAD
-
-      # ✅ FIX 2: Configure git identity for the commit
-      - name: Configure Git
-        run: |
-          git config user.name "github-actions[bot]"
-          git config user.email "github-actions[bot]@users.noreply.github.com"
+          fetch-depth: 0
+          ref: main
+          token: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Set up Python
         uses: actions/setup-python@v5
@@ -37,19 +31,15 @@ jobs:
       - name: Run monitoring script
         run: python main.py
 
-      # ✅ FIX 3: Pull latest remote state before committing, then push
       - name: Commit and push updated snapshot
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-
+          git checkout main
           git add filtered_snapshot.json
-
           if git diff --cached --quiet; then
             echo "No changes — skipping commit."
             exit 0
           fi
-
           git commit -m "chore: update filtered_snapshot.json [$(date -u '+%Y-%m-%d %H:%M UTC')]"
-
           git push --force origin main
