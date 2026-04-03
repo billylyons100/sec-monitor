@@ -42,4 +42,4 @@ jobs:
             exit 0
           fi
           git commit -m "chore: update filtered_snapshot.json [$(date -u '+%Y-%m-%d %H:%M UTC')]"
-          git push --force origin main
+          git push --force origin HEAD:main
