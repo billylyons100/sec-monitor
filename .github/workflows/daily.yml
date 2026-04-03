@@ -39,7 +39,12 @@ jobs:
           git config user.email "github-actions@github.com"
 
           git add -A
+          git status
 
-          git commit -m "Update snapshot" || echo "No changes"
+          echo "FORCING CHANGE"
+          date >> force.txt
+          git add force.txt
 
-          git push https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }} HEAD:main
+          git commit -m "Force update + snapshot" || echo "No changes"
+
+          git push origin main
