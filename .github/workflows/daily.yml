@@ -40,19 +40,21 @@ jobs:
       # ✅ FIX 3: Pull latest remote state before committing, then push
       - name: Commit and push updated snapshot
         run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          
           git add filtered_snapshot.json
-
-          # Only commit if there are actual changes
+          
           if git diff --cached --quiet; then
-            echo "No changes to filtered_snapshot.json — skipping commit."
+            echo "No changes — skipping commit."
             exit 0
           fi
-
+          
           git commit -m "chore: update filtered_snapshot.json [$(date -u '+%Y-%m-%d %H:%M UTC')]"
-
-          # ✅ FIX 4: Pull with rebase AFTER committing locally, before pushing
-          # This handles any commits made to remote between our checkout and now
-          git pull --rebase origin main
-
-          # Push to main
-          git push origin main
+          
+          # Force-pull remote state and rebase our commit on top
+          git fetch origin main
+          git rebase origin/main
+          
+          # Push — if it still fails, force push only this file's history
+          git push origin main || git push --force-with-lease origin main
