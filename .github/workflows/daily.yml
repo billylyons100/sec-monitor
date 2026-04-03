@@ -39,12 +39,7 @@ jobs:
           git config user.email "github-actions@github.com"
 
           git add -A
-          git status
+          git commit -m "Update snapshot" || echo "No changes"
 
-          echo "FORCING CHANGE"
-          date >> force.txt
-          git add force.txt
-
-          git commit -m "Force update + snapshot" || echo "No changes"
-
+          git pull --rebase origin main
           git push origin main
