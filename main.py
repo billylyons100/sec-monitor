@@ -652,9 +652,7 @@ def main() -> None:
                 time.sleep(0.3)   # be polite between detail calls
 
                 if not detail["confirmed"]:
-                    f["effectiveDate"] = ""
-                    f["jurisdiction"]  = ""
-                    unconfirmed_firms.append(f)
+                    log.info("  EXCLUDED (not confirmed): %s [CRD %s]", f["firmName"], f["crd"])
                     continue
 
                 # Parse effectiveDate — IAPD format is "M/D/YYYY" (e.g. "3/17/2026")
