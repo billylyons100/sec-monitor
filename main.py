@@ -72,6 +72,61 @@ SWEEP_QUERIES = [
     "equity", "equities", "group",
 ]
 
+# ── Oversized-query workaround ────────────────────────────────────────────────
+# Confirmed via direct testing (Aug 2026): IAPD's search API hard-stops at
+# start=9900 regardless of how many total results a query has (returns 0 hits
+# past that point, not an error). Four of the terms above individually exceed
+# 9900 total results ("capital", "management", "investment", "advisors"),
+# meaning any firm ranked past position 9900 for ALL of its matching terms
+# was never reachable by the sweep at all. This caused confirmed misses
+# (e.g. Browning Capital Management, Talara Capital Management).
+#
+# Fix, verified against live data before implementing:
+#   1. Two-word combos (oversized term + every other SWEEP_QUERIES term) —
+#      confirmed every combo for all 4 oversized terms stays under 9900.
+#      Catches firms whose name contains the oversized term plus another
+#      sweep word (e.g. "capital management").
+#   2. Per-state split (using the confirmed-working "state" query param) —
+#      confirmed every US state bucket for "capital" stays under 9900.
+#      Catches domestic firms that match only ONE sweep word, which combo
+#      queries alone can't reach (e.g. "Hudson Executive Capital LP").
+#
+# Known residual gap (not fixed, no confirmed case found yet): a firm that
+# matches only one oversized term AND has no US state on file (foreign,
+# single-term). Flagging rather than ignoring — worth revisiting if a future
+# audit finds a miss matching that profile.
+OVERSIZED_SWEEP_TERMS = ["capital", "management", "investment", "advisors"]
+
+US_STATES = [
+    "AL","AK","AZ","AR","CA","CO","CT","DE","FL","GA","HI","ID","IL","IN","IA",
+    "KS","KY","LA","ME","MD","MA","MI","MN","MS","MO","MT","NE","NV","NH","NJ",
+    "NM","NY","NC","ND","OH","OK","OR","PA","RI","SC","SD","TN","TX","UT","VT",
+    "VA","WA","WV","WI","WY","DC","PR","VI","GU",
+]
+
+
+def _build_sweep_jobs() -> list[tuple[str, str | None]]:
+    """Build the full list of (query_text, state_or_None) jobs to run.
+
+    Non-oversized terms run once, unfiltered, exactly as before.
+    Oversized terms are expanded into two-word combos (text-based) plus a
+    per-state split (using the state param), per the verified fix above.
+    """
+    jobs: list[tuple[str, str | None]] = []
+    other_terms = [t for t in SWEEP_QUERIES if t not in OVERSIZED_SWEEP_TERMS]
+
+    for term in SWEEP_QUERIES:
+        if term not in OVERSIZED_SWEEP_TERMS:
+            jobs.append((term, None))
+            continue
+
+        for other in other_terms:
+            jobs.append((f"{term} {other}", None))
+        for state in US_STATES:
+            jobs.append((term, state))
+
+    return jobs
+
 # ── Exact-name whitelist ──────────────────────────────────────────────────────
 # Firms here always pass the filter regardless of negative pattern matches.
 POSITIVE_NAME_WHITELIST: list[str] = [
@@ -416,18 +471,26 @@ def sweep_terminated() -> dict[str, dict]:
 
     Full sweep every run — no early stopping — so that newly appearing
     firms in any position of the result set are always captured.
+
+    Oversized terms (see OVERSIZED_SWEEP_TERMS) are expanded into smaller
+    combo/state-split jobs so no query individually exceeds IAPD's
+    confirmed 9900-result pagination wall.
     """
     all_crds: dict[str, dict] = {}
+    sweep_jobs = _build_sweep_jobs()
 
-    for query in SWEEP_QUERIES:
+    for query, state in sweep_jobs:
         start       = 0
         query_total = None
 
         while start <= MAX_START:
-            data = _get(IAPD_SEARCH_URL, {
+            params = {
                 "query": query, "ct": "Terminated",
                 "nrows": str(PAGE_SIZE), "start": str(start),
-            })
+            }
+            if state:
+                params["state"] = state
+            data = _get(IAPD_SEARCH_URL, params)
             time.sleep(REQUEST_DELAY)
             if data is None:
                 break
