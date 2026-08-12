@@ -11,11 +11,10 @@ import time
 import smtplib
 import logging
 import threading
+import itertools
 from datetime import datetime, timezone, timedelta
 from email.mime.multipart import MIMEMultipart
 from email.mime.text import MIMEText
-
-from zoneinfo import ZoneInfo
 
 import requests
 
@@ -79,52 +78,40 @@ SWEEP_QUERIES = [
 # 9900 total results ("capital", "management", "investment", "advisors"),
 # meaning any firm ranked past position 9900 for ALL of its matching terms
 # was never reachable by the sweep at all. This caused confirmed misses
-# (e.g. Browning Capital Management, Talara Capital Management).
+# (e.g. Browning Capital Management, Talara Capital Management). A full
+# re-check of all 22 terms (Aug 12, 2026) confirmed these are still the only
+# 4 that exceed the cap.
 #
 # Fix, verified against live data before implementing:
-#   1. Two-word combos (oversized term + every other SWEEP_QUERIES term) —
-#      confirmed every combo for all 4 oversized terms stays under 9900.
-#      Catches firms whose name contains the oversized term plus another
-#      sweep word (e.g. "capital management").
-#   2. Per-state split (using the confirmed-working "state" query param) —
-#      confirmed every US state bucket for "capital" stays under 9900.
-#      Catches domestic firms that match only ONE sweep word, which combo
-#      queries alone can't reach (e.g. "Hudson Executive Capital LP").
+#   1. Every term — including these 4 — runs its plain single-term query
+#      (an Aug 11 regression had dropped this for the oversized terms in
+#      favor of the broken per-state split below).
+#   2. Two-word combos between every PAIR of oversized terms (6 combos) —
+#      confirmed live, every combo total stays under 9900. Catches firms
+#      whose name contains two oversized terms (e.g. "Capital Management"),
+#      exactly the profile of the confirmed misses above.
 #
-# Known residual gap (not fixed, no confirmed case found yet): a firm that
-# matches only one oversized term AND has no US state on file (foreign,
-# single-term). Flagging rather than ignoring — worth revisiting if a future
-# audit finds a miss matching that profile.
+# A per-state split (using the "state" query param) was tried as an
+# additional catch-all for firms matching only one oversized term, but
+# confirmed non-functional and has been removed entirely.
+#
+# Known residual gap: a firm matching only ONE oversized term, ranked past
+# position 9900 in that term's query, with no second oversized term in its
+# name, is not reachable by any query here. No confirmed miss of this
+# profile found yet — revisit if a future audit finds one.
 OVERSIZED_SWEEP_TERMS = ["capital", "management", "investment", "advisors"]
-
-US_STATES = [
-    "AL","AK","AZ","AR","CA","CO","CT","DE","FL","GA","HI","ID","IL","IN","IA",
-    "KS","KY","LA","ME","MD","MA","MI","MN","MS","MO","MT","NE","NV","NH","NJ",
-    "NM","NY","NC","ND","OH","OK","OR","PA","RI","SC","SD","TN","TX","UT","VT",
-    "VA","WA","WV","WI","WY","DC","PR","VI","GU",
-]
+OVERSIZED_COMBOS = list(itertools.combinations(OVERSIZED_SWEEP_TERMS, 2))
 
 
-def _build_sweep_jobs() -> list[tuple[str, str | None]]:
-    """Build the full list of (query_text, state_or_None) jobs to run.
+def _build_sweep_jobs() -> list[str]:
+    """Build the full list of query strings to run.
 
-    Non-oversized terms run once, unfiltered, exactly as before.
-    Oversized terms are expanded into two-word combos (text-based) plus a
-    per-state split (using the state param), per the verified fix above.
+    Every term in SWEEP_QUERIES runs its plain single-term query. The
+    oversized terms additionally get two-word combo queries paired with
+    each other (see OVERSIZED_COMBOS above).
     """
-    jobs: list[tuple[str, str | None]] = []
-    other_terms = [t for t in SWEEP_QUERIES if t not in OVERSIZED_SWEEP_TERMS]
-
-    for term in SWEEP_QUERIES:
-        if term not in OVERSIZED_SWEEP_TERMS:
-            jobs.append((term, None))
-            continue
-
-        for other in other_terms:
-            jobs.append((f"{term} {other}", None))
-        for state in US_STATES:
-            jobs.append((term, state))
-
+    jobs = list(SWEEP_QUERIES)
+    jobs += [f"{a} {b}" for a, b in OVERSIZED_COMBOS]
     return jobs
 
 # ── Exact-name whitelist ──────────────────────────────────────────────────────
@@ -466,20 +453,25 @@ def fetch_firm_detail(crd: str) -> dict:
     return _not_found
 
 
-def sweep_terminated() -> dict[str, dict]:
-    """Paginate all sweep queries; return {crd: {name, city, state}}.
+def sweep_terminated() -> tuple[dict[str, dict], list[str]]:
+    """Paginate all sweep queries; return ({crd: {name, city, state}}, failed_jobs).
 
     Full sweep every run — no early stopping — so that newly appearing
     firms in any position of the result set are always captured.
 
-    Oversized terms (see OVERSIZED_SWEEP_TERMS) are expanded into smaller
-    combo/state-split jobs so no query individually exceeds IAPD's
-    confirmed 9900-result pagination wall.
+    Oversized terms (see OVERSIZED_SWEEP_TERMS) get extra combo jobs (see
+    _build_sweep_jobs) so no query individually exceeds IAPD's confirmed
+    9900-result pagination wall.
+
+    failed_jobs lists any query that had to abandon pagination early
+    because a request failed even after _get()'s internal retries — used
+    by run_delta_cycle to detect an incomplete sweep.
     """
     all_crds: dict[str, dict] = {}
+    failed_jobs: list[str] = []
     sweep_jobs = _build_sweep_jobs()
 
-    for query, state in sweep_jobs:
+    for query in sweep_jobs:
         start       = 0
         query_total = None
 
@@ -488,11 +480,10 @@ def sweep_terminated() -> dict[str, dict]:
                 "query": query, "ct": "Terminated",
                 "nrows": str(PAGE_SIZE), "start": str(start),
             }
-            if state:
-                params["state"] = state
             data = _get(IAPD_SEARCH_URL, params)
             time.sleep(REQUEST_DELAY)
             if data is None:
+                failed_jobs.append(query)
                 break
 
             hits_obj = data.get("hits") or {}
@@ -525,7 +516,7 @@ def sweep_terminated() -> dict[str, dict]:
             if start > (query_total or 0):
                 break
 
-    return all_crds
+    return all_crds, failed_jobs
 
 
 # ── Email ─────────────────────────────────────────────────────────────────────
@@ -623,28 +614,34 @@ def build_filtered_set(sweep_results: dict) -> dict:
     return filtered
 
 
-def run_delta_cycle(prior_snapshot: dict) -> tuple[dict, list[dict], int]:
+def run_delta_cycle(prior_snapshot: dict) -> tuple[dict, list[dict], int, bool]:
     """Run one full sweep + filter + diff.
 
-    Returns (current_filtered_set, new_firms_list, total_scanned).
+    Returns (current_filtered_set, new_firms_list, total_scanned, run_incomplete).
     new_firms_list contains entries present in current but absent from prior.
-    Rate-limit retries: up to 12 × 5 min (1 hour) before giving up.
+    run_incomplete is True if the sweep was still rate-limited or had failed
+    jobs after exhausting retries — callers should treat the run's data as
+    unreliable (skip saving the snapshot, alert instead of reporting a delta).
+    Retries: up to 12 × 5 min (1 hour) before giving up.
     """
     global _rate_limited
     RETRY_WAIT = 300
 
     sweep_results: dict = {}
+    failed_jobs: list[str] = []
     for attempt in range(1, 13):
         _rate_limited = False
-        sweep_results = sweep_terminated()
-        if not _rate_limited:
+        sweep_results, failed_jobs = sweep_terminated()
+        if not _rate_limited and not failed_jobs:
             break
+        reason = "rate-limited" if _rate_limited else f"{len(failed_jobs)} job(s) failed"
         log.warning(
-            "IAPD rate-limited on attempt %d/12 — retrying in %ds …",
-            attempt, RETRY_WAIT,
+            "IAPD sweep incomplete (%s) on attempt %d/12 — retrying in %ds …",
+            reason, attempt, RETRY_WAIT,
         )
         time.sleep(RETRY_WAIT)
 
+    run_incomplete   = _rate_limited or bool(failed_jobs)
     total_scanned    = len(sweep_results)
     current_filtered = build_filtered_set(sweep_results)
     new_firms        = [
@@ -653,7 +650,7 @@ def run_delta_cycle(prior_snapshot: dict) -> tuple[dict, list[dict], int]:
     ]
     # Sort new firms alphabetically for a readable email
     new_firms.sort(key=lambda f: f["firmName"])
-    return current_filtered, new_firms, total_scanned
+    return current_filtered, new_firms, total_scanned, run_incomplete
 
 
 # ── Main ──────────────────────────────────────────────────────────────────────
@@ -662,7 +659,7 @@ def main() -> None:
     log.info("SEC Investment Adviser Termination Monitor — snapshot-diff model.")
     log.info("Data source    : IAPD (adviserinfo.sec.gov)")
     log.info("Detection model: CRD delta vs %s", SNAPSHOT_FILE)
-    log.info("Schedule       : daily at 02:00 AM Eastern Time — checking every 60 seconds")
+    log.info("Trigger        : GitHub Action — one pass per invocation.")
 
     def _one_pass() -> None:
         """Run one complete sweep → filter → diff → email → snapshot cycle."""
@@ -680,11 +677,32 @@ def main() -> None:
         else:
             log.info("Prior snapshot: %d firms", len(snapshot))
 
-        current_filtered, new_firms, total_scanned = run_delta_cycle(snapshot)
+        current_filtered, new_firms, total_scanned, run_incomplete = run_delta_cycle(snapshot)
         total_filtered = len(current_filtered)
 
         log.info("Data fetched — scanned: %d | passing filter: %d | newly appeared: %d",
                  total_scanned, total_filtered, len(new_firms) if not is_baseline else 0)
+
+        if run_incomplete:
+            log.error(
+                "Sweep did not complete after exhausting retries — "
+                "skipping snapshot overwrite and sending alert instead of a delta email."
+            )
+            subject = "[IAPD ALERT] Run did not complete"
+            body    = (
+                f"The IAPD terminated-adviser sweep did not finish successfully, "
+                f"even after exhausting its retry logic (rate-limit and/or "
+                f"per-job failures).\n\n"
+                f"Firms scanned before giving up: {total_scanned}\n"
+                f"Firms passing institutional filter (partial — NOT saved): {total_filtered}\n\n"
+                f"{SNAPSHOT_FILE} was NOT overwritten, so the next run will still "
+                f"diff against the last known-good snapshot rather than this "
+                f"incomplete data.\n\n"
+                f"Run attempted at {datetime.now(timezone.utc).strftime('%Y-%m-%d %H:%M UTC')}."
+            )
+            send_email(subject, body)
+            log.info("Run marked incomplete (%.1f s) — snapshot NOT saved.", time.time() - t0)
+            return
 
         if is_baseline:
             log.info("Baseline established: %d firms saved.", total_filtered)
@@ -777,22 +795,16 @@ def main() -> None:
         log.info("Snapshot saved: %d firms → %s (%.1f s)",
                  total_filtered, SNAPSHOT_FILE, time.time() - t0)
 
-    EASTERN = ZoneInfo("America/New_York")
-    last_scan_date = None
-
     log.info("=" * 60)
-    log.info("IMMEDIATE RUN: executing scan now.")
+    log.info("RUN: executing scan now.")
     log.info("=" * 60)
     try:
         _one_pass()
     except Exception:
-        log.exception("Unexpected error during immediate run.")
+        log.exception("Unexpected error during run.")
     log.info("=" * 60)
-    log.info("IMMEDIATE RUN COMPLETE.")
+    log.info("RUN COMPLETE.")
     log.info("=" * 60)
-
-    log.info("Entering main loop — checking time every 60 seconds.")
-    _one_pass()
 
 
 
