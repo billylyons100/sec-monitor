@@ -550,22 +550,15 @@ def sweep_terminated() -> tuple[dict[str, dict], list[str]]:
 
             for h in hits:
                 src = h.get("_source", {})
-                # REVERTED 8/14/26. Was removed earlier the same day based on
-                # two examples (Lovc Management LLC, Hudson Executive Capital
-                # LP) that matched ct=Terminated with firm_ia_scope="ACTIVE",
-                # read at the time as proof the check was wrongly excluding
-                # genuine misses. It was not proof of that — removing the
-                # check caused "newly appeared" to jump from a normal 2-20/day
-                # to 15,262 in one run, confirming firm_ia_scope=="INACTIVE"
-                # is doing real, necessary filtering: it is very likely
-                # distinguishing firms that are genuinely wound down from
-                # firms that still hold some active registration but also
-                # carry a terminated record for one specific registration
-                # type (a dropped state registration, an old DBA, a lapsed
-                # secondary entity) while the actual business keeps
-                # operating. Restored as-is. Do not remove this check again
-                # without first testing on a held-out sample and checking the
-                # resulting "newly appeared" count before a full run.
+                # firm_ia_scope == "INACTIVE" gate. CONFIRMED CORRECT AND
+                # INTENTIONAL 8/14/26 (Bill Lyons, FLS). Firms with scope
+                # "ACTIVE" have terminated one specific registration while
+                # remaining an operating business elsewhere — not relevant
+                # to FLS, which only wants firms that have actually wound
+                # down. 11 firms in the 8/13/26 SEC-X audit matched this
+                # "active but one registration terminated" profile (e.g.
+                # Hudson Executive Capital LP); explicitly confirmed as
+                # correctly excluded, not a miss. Do not remove this check.
                 if src.get("firm_ia_scope", "") != "INACTIVE":
                     continue
                 crd = str(src.get("firm_source_id", ""))
