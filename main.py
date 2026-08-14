@@ -95,23 +95,72 @@ SWEEP_QUERIES = [
 # additional catch-all for firms matching only one oversized term, but
 # confirmed non-functional and has been removed entirely.
 #
-# Known residual gap: a firm matching only ONE oversized term, ranked past
-# position 9900 in that term's query, with no second oversized term in its
-# name, is not reachable by any query here. No confirmed miss of this
-# profile found yet — revisit if a future audit finds one.
+# Known residual gap, CONFIRMED by the 8/13/26 SEC-X correlation audit:
+# a firm matching only ONE oversized term, ranked past position 9900 in
+# that term's query, with no second oversized term in its name, is not
+# reachable by any query here. Six confirmed misses of exactly this
+# profile (e.g. Kilonova Capital LLC, Lovc Management LLC) — every one of
+# them also carries a legal-entity suffix. Pairing each oversized term
+# with these suffix words gives a second, narrower query in the same
+# spirit as OVERSIZED_COMBOS, without needing a second oversized term to
+# exist in the name.
+#
+# VERIFIED LIVE 8/14/26 (Colab, against IAPD_SEARCH_URL): 26 of 28
+# oversized+suffix combos stay under MAX_START (9900) as flat queries and
+# are enabled below. Two did not — "capital llc" (13,262 total) and
+# "management llc" (16,329 total), still too common even after suffix
+# narrowing.
+#
+# For those two, a per-state split was piloted (NOT the same approach as
+# the broken Aug 11 version — this one was tested first). Confirmed live:
+# every one of the 53 state/territory buckets stays well under the cap
+# (max 1,754 for "capital llc", max 2,371 for "management llc" — neither
+# close to 9900), which is what actually matters. State totals summing to
+# slightly more than the flat-query baseline (~9-19% over) reflects firms
+# with more than one registered address, not a broken filter — if the
+# state param were being ignored, every bucket would report the full
+# baseline total, and none do. Existing CRD-dedup in this function makes
+# the mild overlap harmless.
 OVERSIZED_SWEEP_TERMS = ["capital", "management", "investment", "advisors"]
 OVERSIZED_COMBOS = list(itertools.combinations(OVERSIZED_SWEEP_TERMS, 2))
 
+ENTITY_SUFFIX_TERMS = ["llc", "lp", "ltd", "llp", "inc", "corp", "limited"]
+# "capital llc" and "management llc" excluded from the flat combo list —
+# handled instead via STATE_SPLIT_QUERIES below.
+_SUFFIX_EXCLUSIONS = {("capital", "llc"), ("management", "llc")}
+OVERSIZED_SUFFIX_COMBOS = [
+    (t, s) for t in OVERSIZED_SWEEP_TERMS for s in ENTITY_SUFFIX_TERMS
+    if (t, s) not in _SUFFIX_EXCLUSIONS
+]
 
-def _build_sweep_jobs() -> list[str]:
-    """Build the full list of query strings to run.
+# Only these two queries get the per-state treatment — deliberately not
+# applied broadly. The Aug 11 regression came from doing this across all
+# 4 oversized terms without verifying it worked first; this scope is
+# limited to the two specific queries confirmed live on 8/14/26.
+STATE_SPLIT_QUERIES = ["capital llc", "management llc"]
+US_STATES = [
+    "AL","AK","AZ","AR","CA","CO","CT","DE","FL","GA","HI","ID","IL","IN","IA",
+    "KS","KY","LA","ME","MD","MA","MI","MN","MS","MO","MT","NE","NV","NH","NJ",
+    "NM","NY","NC","ND","OH","OK","OR","PA","RI","SC","SD","TN","TX","UT","VT",
+    "VA","WA","WV","WI","WY","DC","PR","VI","GU",
+]
 
-    Every term in SWEEP_QUERIES runs its plain single-term query. The
-    oversized terms additionally get two-word combo queries paired with
-    each other (see OVERSIZED_COMBOS above).
+
+def _build_sweep_jobs() -> list[tuple[str, str | None]]:
+    """Build the full list of (query_text, state_or_None) jobs to run.
+
+    Every term in SWEEP_QUERIES runs its plain single-term query
+    (state=None). The oversized terms additionally get two-word combo
+    queries paired with each other (OVERSIZED_COMBOS) and with common
+    legal-entity suffix words (OVERSIZED_SUFFIX_COMBOS), to reach firms
+    that only carry one oversized term in their name. The two suffix
+    combos that still exceed the cap on their own (STATE_SPLIT_QUERIES)
+    are instead split into one job per US state/territory.
     """
-    jobs = list(SWEEP_QUERIES)
-    jobs += [f"{a} {b}" for a, b in OVERSIZED_COMBOS]
+    jobs: list[tuple[str, str | None]] = [(q, None) for q in SWEEP_QUERIES]
+    jobs += [(f"{a} {b}", None) for a, b in OVERSIZED_COMBOS]
+    jobs += [(f"{a} {b}", None) for a, b in OVERSIZED_SUFFIX_COMBOS]
+    jobs += [(q, state) for q in STATE_SPLIT_QUERIES for state in US_STATES]
     return jobs
 
 # ── Exact-name whitelist ──────────────────────────────────────────────────────
@@ -459,19 +508,23 @@ def sweep_terminated() -> tuple[dict[str, dict], list[str]]:
     Full sweep every run — no early stopping — so that newly appearing
     firms in any position of the result set are always captured.
 
-    Oversized terms (see OVERSIZED_SWEEP_TERMS) get extra combo jobs (see
-    _build_sweep_jobs) so no query individually exceeds IAPD's confirmed
-    9900-result pagination wall.
+    Oversized terms (see OVERSIZED_SWEEP_TERMS) get extra combo jobs, and
+    two specific combos get a per-state split (see _build_sweep_jobs), so
+    no query individually exceeds IAPD's confirmed 9900-result pagination
+    wall.
 
     failed_jobs lists any query that had to abandon pagination early
     because a request failed even after _get()'s internal retries — used
-    by run_delta_cycle to detect an incomplete sweep.
+    by run_delta_cycle to detect an incomplete sweep. Job labels include
+    the state suffix (e.g. "capital llc [CA]") when applicable, so a
+    failure is traceable to the specific state job that failed.
     """
     all_crds: dict[str, dict] = {}
     failed_jobs: list[str] = []
     sweep_jobs = _build_sweep_jobs()
 
-    for query in sweep_jobs:
+    for query, state in sweep_jobs:
+        job_label = f"{query} [{state}]" if state else query
         start       = 0
         query_total = None
 
@@ -480,10 +533,12 @@ def sweep_terminated() -> tuple[dict[str, dict], list[str]]:
                 "query": query, "ct": "Terminated",
                 "nrows": str(PAGE_SIZE), "start": str(start),
             }
+            if state:
+                params["state"] = state
             data = _get(IAPD_SEARCH_URL, params)
             time.sleep(REQUEST_DELAY)
             if data is None:
-                failed_jobs.append(query)
+                failed_jobs.append(job_label)
                 break
 
             hits_obj = data.get("hits") or {}
