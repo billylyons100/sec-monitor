@@ -550,20 +550,24 @@ def sweep_terminated() -> tuple[dict[str, dict], list[str]]:
 
             for h in hits:
                 src = h.get("_source", {})
-                # NOTE: a firm_ia_scope == "INACTIVE" check used to sit here.
-                # Removed 8/14/26 — CONFIRMED wrong via live IAPD data during
-                # the SEC-X correlation audit. firm_ia_scope reflects whether
-                # the firm entity has ANY active registration anywhere, not
-                # whether the specific registration this query already
-                # filtered to (ct=Terminated) is terminated. Two confirmed
-                # misses (Lovc Management LLC, Hudson Executive Capital LP)
-                # both carry firm_ia_scope="ACTIVE" while genuinely showing
-                # up correctly under ct=Terminated — the scope check was
-                # silently discarding valid, already-correctly-filtered
-                # results. The ct=Terminated query param does the real
-                # filtering; fetch_firm_detail() does the authoritative
-                # confirmation later for any firm that's actually new. This
-                # check added nothing but false negatives.
+                # REVERTED 8/14/26. Was removed earlier the same day based on
+                # two examples (Lovc Management LLC, Hudson Executive Capital
+                # LP) that matched ct=Terminated with firm_ia_scope="ACTIVE",
+                # read at the time as proof the check was wrongly excluding
+                # genuine misses. It was not proof of that — removing the
+                # check caused "newly appeared" to jump from a normal 2-20/day
+                # to 15,262 in one run, confirming firm_ia_scope=="INACTIVE"
+                # is doing real, necessary filtering: it is very likely
+                # distinguishing firms that are genuinely wound down from
+                # firms that still hold some active registration but also
+                # carry a terminated record for one specific registration
+                # type (a dropped state registration, an old DBA, a lapsed
+                # secondary entity) while the actual business keeps
+                # operating. Restored as-is. Do not remove this check again
+                # without first testing on a held-out sample and checking the
+                # resulting "newly appeared" count before a full run.
+                if src.get("firm_ia_scope", "") != "INACTIVE":
+                    continue
                 crd = str(src.get("firm_source_id", ""))
                 if not crd or crd in all_crds:
                     continue
