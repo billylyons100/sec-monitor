@@ -550,8 +550,20 @@ def sweep_terminated() -> tuple[dict[str, dict], list[str]]:
 
             for h in hits:
                 src = h.get("_source", {})
-                if src.get("firm_ia_scope", "") != "INACTIVE":
-                    continue
+                # NOTE: a firm_ia_scope == "INACTIVE" check used to sit here.
+                # Removed 8/14/26 — CONFIRMED wrong via live IAPD data during
+                # the SEC-X correlation audit. firm_ia_scope reflects whether
+                # the firm entity has ANY active registration anywhere, not
+                # whether the specific registration this query already
+                # filtered to (ct=Terminated) is terminated. Two confirmed
+                # misses (Lovc Management LLC, Hudson Executive Capital LP)
+                # both carry firm_ia_scope="ACTIVE" while genuinely showing
+                # up correctly under ct=Terminated — the scope check was
+                # silently discarding valid, already-correctly-filtered
+                # results. The ct=Terminated query param does the real
+                # filtering; fetch_firm_detail() does the authoritative
+                # confirmation later for any firm that's actually new. This
+                # check added nothing but false negatives.
                 crd = str(src.get("firm_source_id", ""))
                 if not crd or crd in all_crds:
                     continue
