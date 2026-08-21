@@ -1319,12 +1319,12 @@
     "sourceLink": "https://www.adviserinfo.sec.gov/firm/summary/325845",
     "matchReason": "Strong pattern: 'capital llc'"
   },
-  "318637": {
-    "firmName": "1128 CAPITAL, LLC",
-    "crd": "318637",
-    "city": "PLANO",
-    "state": "TX",
-    "sourceLink": "https://www.adviserinfo.sec.gov/firm/summary/318637",
+  "290069": {
+    "firmName": "FLEX CAPITAL LLC",
+    "crd": "290069",
+    "city": "SAN FRANCISCO",
+    "state": "CA",
+    "sourceLink": "https://www.adviserinfo.sec.gov/firm/summary/290069",
     "matchReason": "Strong pattern: 'capital llc'"
   },
   "333077": {
@@ -1335,12 +1335,12 @@
     "sourceLink": "https://www.adviserinfo.sec.gov/firm/summary/333077",
     "matchReason": "Strong pattern: 'capital llc'"
   },
-  "290069": {
-    "firmName": "FLEX CAPITAL LLC",
-    "crd": "290069",
-    "city": "SAN FRANCISCO",
-    "state": "CA",
-    "sourceLink": "https://www.adviserinfo.sec.gov/firm/summary/290069",
+  "318637": {
+    "firmName": "1128 CAPITAL, LLC",
+    "crd": "318637",
+    "city": "PLANO",
+    "state": "TX",
+    "sourceLink": "https://www.adviserinfo.sec.gov/firm/summary/318637",
     "matchReason": "Strong pattern: 'capital llc'"
   },
   "133678": {
@@ -3943,20 +3943,20 @@
     "sourceLink": "https://www.adviserinfo.sec.gov/firm/summary/330497",
     "matchReason": "Strong pattern: 'capital ltd'"
   },
-  "146087": {
-    "firmName": "MONITOR CAPITAL LLC",
-    "crd": "146087",
-    "city": "CARMEL",
-    "state": "NY",
-    "sourceLink": "https://www.adviserinfo.sec.gov/firm/summary/146087",
-    "matchReason": "Strong pattern: 'capital llc'"
-  },
   "167218": {
     "firmName": "ASCRIBE CAPITAL LLC",
     "crd": "167218",
     "city": "NEW YORK CITY",
     "state": "NY",
     "sourceLink": "https://www.adviserinfo.sec.gov/firm/summary/167218",
+    "matchReason": "Strong pattern: 'capital llc'"
+  },
+  "146087": {
+    "firmName": "MONITOR CAPITAL LLC",
+    "crd": "146087",
+    "city": "CARMEL",
+    "state": "NY",
+    "sourceLink": "https://www.adviserinfo.sec.gov/firm/summary/146087",
     "matchReason": "Strong pattern: 'capital llc'"
   },
   "120188": {
@@ -4951,20 +4951,20 @@
     "sourceLink": "https://www.adviserinfo.sec.gov/firm/summary/160958",
     "matchReason": "Score 16: capital limited"
   },
-  "331243": {
-    "firmName": "WAYSTONE CAPITAL LLC",
-    "crd": "331243",
-    "city": "TULSA",
-    "state": "OK",
-    "sourceLink": "https://www.adviserinfo.sec.gov/firm/summary/331243",
-    "matchReason": "Strong pattern: 'capital llc'"
-  },
   "329166": {
     "firmName": "VANORDEN CAPITAL L.L.C.",
     "crd": "329166",
     "city": "EDEN PRAIRIE",
     "state": "MN",
     "sourceLink": "https://www.adviserinfo.sec.gov/firm/summary/329166",
+    "matchReason": "Strong pattern: 'capital llc'"
+  },
+  "331243": {
+    "firmName": "WAYSTONE CAPITAL LLC",
+    "crd": "331243",
+    "city": "TULSA",
+    "state": "OK",
+    "sourceLink": "https://www.adviserinfo.sec.gov/firm/summary/331243",
     "matchReason": "Strong pattern: 'capital llc'"
   },
   "317599": {
@@ -4975,20 +4975,20 @@
     "sourceLink": "https://www.adviserinfo.sec.gov/firm/summary/317599",
     "matchReason": "Strong pattern: 'capital llc'"
   },
-  "330382": {
-    "firmName": "MERISTEM CAPITAL LLC",
-    "crd": "330382",
-    "city": "ZIONSVILLE",
-    "state": "IN",
-    "sourceLink": "https://www.adviserinfo.sec.gov/firm/summary/330382",
-    "matchReason": "Strong pattern: 'capital llc'"
-  },
   "288966": {
     "firmName": "WESTHOOK CAPITAL, LLC",
     "crd": "288966",
     "city": "BEVERLY HILLS",
     "state": "CA",
     "sourceLink": "https://www.adviserinfo.sec.gov/firm/summary/288966",
+    "matchReason": "Strong pattern: 'capital llc'"
+  },
+  "330382": {
+    "firmName": "MERISTEM CAPITAL LLC",
+    "crd": "330382",
+    "city": "ZIONSVILLE",
+    "state": "IN",
+    "sourceLink": "https://www.adviserinfo.sec.gov/firm/summary/330382",
     "matchReason": "Strong pattern: 'capital llc'"
   },
   "314587": {
@@ -5007,14 +5007,6 @@
     "sourceLink": "https://www.adviserinfo.sec.gov/firm/summary/300741",
     "matchReason": "Strong pattern: 'capital llc'"
   },
-  "305110": {
-    "firmName": "ATS CAPITAL ADVISORS",
-    "crd": "305110",
-    "city": "PLYMOUTH",
-    "state": "MI",
-    "sourceLink": "https://www.adviserinfo.sec.gov/firm/summary/305110",
-    "matchReason": "Score 21: capital advisors"
-  },
   "309283": {
     "firmName": "APSE CAPITAL LIMITED",
     "crd": "309283",
@@ -5022,6 +5014,14 @@
     "state": "",
     "sourceLink": "https://www.adviserinfo.sec.gov/firm/summary/309283",
     "matchReason": "Score 16: capital limited"
+  },
+  "305110": {
+    "firmName": "ATS CAPITAL ADVISORS",
+    "crd": "305110",
+    "city": "PLYMOUTH",
+    "state": "MI",
+    "sourceLink": "https://www.adviserinfo.sec.gov/firm/summary/305110",
+    "matchReason": "Score 21: capital advisors"
   },
   "301396": {
     "firmName": "REINVENT CAPITAL LLC",
@@ -5479,20 +5479,20 @@
     "sourceLink": "https://www.adviserinfo.sec.gov/firm/summary/300986",
     "matchReason": "Strong pattern: 'capital llc'"
   },
-  "323245": {
-    "firmName": "IVY CREEK CAPITAL LLC",
-    "crd": "323245",
-    "city": "CHARLOTTESVILLE",
-    "state": "VA",
-    "sourceLink": "https://www.adviserinfo.sec.gov/firm/summary/323245",
-    "matchReason": "Strong pattern: 'capital llc'"
-  },
   "291368": {
     "firmName": "FULL SAIL CAPITAL, LLC",
     "crd": "291368",
     "city": "OKLAHOMA CITY",
     "state": "OK",
     "sourceLink": "https://www.adviserinfo.sec.gov/firm/summary/291368",
+    "matchReason": "Strong pattern: 'capital llc'"
+  },
+  "323245": {
+    "firmName": "IVY CREEK CAPITAL LLC",
+    "crd": "323245",
+    "city": "CHARLOTTESVILLE",
+    "state": "VA",
+    "sourceLink": "https://www.adviserinfo.sec.gov/firm/summary/323245",
     "matchReason": "Strong pattern: 'capital llc'"
   },
   "152078": {
@@ -6271,14 +6271,6 @@
     "sourceLink": "https://www.adviserinfo.sec.gov/firm/summary/307763",
     "matchReason": "Strong pattern: 'capital partners'"
   },
-  "166347": {
-    "firmName": "RAMA CAPITAL PARTNERS",
-    "crd": "166347",
-    "city": "CALABASAS",
-    "state": "CA",
-    "sourceLink": "https://www.adviserinfo.sec.gov/firm/summary/166347",
-    "matchReason": "Strong pattern: 'capital partners'"
-  },
   "309865": {
     "firmName": "BIOIMPACT CAPITAL LLC",
     "crd": "309865",
@@ -6286,6 +6278,14 @@
     "state": "MA",
     "sourceLink": "https://www.adviserinfo.sec.gov/firm/summary/309865",
     "matchReason": "Strong pattern: 'capital llc'"
+  },
+  "166347": {
+    "firmName": "RAMA CAPITAL PARTNERS",
+    "crd": "166347",
+    "city": "CALABASAS",
+    "state": "CA",
+    "sourceLink": "https://www.adviserinfo.sec.gov/firm/summary/166347",
+    "matchReason": "Strong pattern: 'capital partners'"
   },
   "159768": {
     "firmName": "ROSEMOUNT CAPITAL LLC",
@@ -9943,6 +9943,14 @@
     "sourceLink": "https://www.adviserinfo.sec.gov/firm/summary/129898",
     "matchReason": "Strong pattern: 'capital partners'"
   },
+  "337348": {
+    "firmName": "UNBOUND CAPITAL ADVISORS",
+    "crd": "337348",
+    "city": "SAINT AUGUSTINE",
+    "state": "FL",
+    "sourceLink": "https://www.adviserinfo.sec.gov/firm/summary/337348",
+    "matchReason": "Score 21: capital advisors"
+  },
   "333919": {
     "firmName": "CLINE CAPITAL MANAGEMENT",
     "crd": "333919",
@@ -9958,14 +9966,6 @@
     "state": "LA",
     "sourceLink": "https://www.adviserinfo.sec.gov/firm/summary/325484",
     "matchReason": "Strong pattern: 'capital management'"
-  },
-  "337348": {
-    "firmName": "UNBOUND CAPITAL ADVISORS",
-    "crd": "337348",
-    "city": "SAINT AUGUSTINE",
-    "state": "FL",
-    "sourceLink": "https://www.adviserinfo.sec.gov/firm/summary/337348",
-    "matchReason": "Score 21: capital advisors"
   },
   "135440": {
     "firmName": "PRISM CAPITAL MANAGEMENT",
@@ -11006,6 +11006,14 @@
     "state": "CA",
     "sourceLink": "https://www.adviserinfo.sec.gov/firm/summary/126826",
     "matchReason": "Strong pattern: 'capital management'"
+  },
+  "319022": {
+    "firmName": "14B CAPITAL MANAGEMENT LP",
+    "crd": "319022",
+    "city": "LA JOLLA",
+    "state": "CA",
+    "sourceLink": "https://www.adviserinfo.sec.gov/firm/summary/319022",
+    "matchReason": "Strong pattern: 'capital management lp'"
   },
   "166821": {
     "firmName": "DMTS CAPITAL ADVISORS, LLC",
@@ -13207,14 +13215,6 @@
     "sourceLink": "https://www.adviserinfo.sec.gov/firm/summary/301157",
     "matchReason": "Strong pattern: 'capital management llc'"
   },
-  "104814": {
-    "firmName": "STEVEN CHARLES CAPITAL LTD",
-    "crd": "104814",
-    "city": "ROCHESTER",
-    "state": "NY",
-    "sourceLink": "https://www.adviserinfo.sec.gov/firm/summary/104814",
-    "matchReason": "Strong pattern: 'capital ltd'"
-  },
   "154400": {
     "firmName": "GRAND STRATEGY CAPITAL, LLC",
     "crd": "154400",
@@ -13223,13 +13223,13 @@
     "sourceLink": "https://www.adviserinfo.sec.gov/firm/summary/154400",
     "matchReason": "Strong pattern: 'capital llc'"
   },
-  "306687": {
-    "firmName": "PULA CAPITAL MANAGEMENT LP",
-    "crd": "306687",
-    "city": "CHARLOTTESVILLE",
-    "state": "VA",
-    "sourceLink": "https://www.adviserinfo.sec.gov/firm/summary/306687",
-    "matchReason": "Strong pattern: 'capital management lp'"
+  "104814": {
+    "firmName": "STEVEN CHARLES CAPITAL LTD",
+    "crd": "104814",
+    "city": "ROCHESTER",
+    "state": "NY",
+    "sourceLink": "https://www.adviserinfo.sec.gov/firm/summary/104814",
+    "matchReason": "Strong pattern: 'capital ltd'"
   },
   "284607": {
     "firmName": "DJH CAPITAL MANAGEMENT, LLC.",
@@ -13238,6 +13238,14 @@
     "state": "TX",
     "sourceLink": "https://www.adviserinfo.sec.gov/firm/summary/284607",
     "matchReason": "Strong pattern: 'capital management llc'"
+  },
+  "306687": {
+    "firmName": "PULA CAPITAL MANAGEMENT LP",
+    "crd": "306687",
+    "city": "CHARLOTTESVILLE",
+    "state": "VA",
+    "sourceLink": "https://www.adviserinfo.sec.gov/firm/summary/306687",
+    "matchReason": "Strong pattern: 'capital management lp'"
   },
   "291441": {
     "firmName": "CRYSTAL WATERS CAPITAL, LLC",
@@ -13309,14 +13317,6 @@
     "city": "EVANSTON",
     "state": "IL",
     "sourceLink": "https://www.adviserinfo.sec.gov/firm/summary/331388",
-    "matchReason": "Score 23: capital advisors"
-  },
-  "317017": {
-    "firmName": "LYNX1 CAPITAL ADVISORS LLC",
-    "crd": "317017",
-    "city": "SAN JUAN",
-    "state": "PR",
-    "sourceLink": "https://www.adviserinfo.sec.gov/firm/summary/317017",
     "matchReason": "Score 23: capital advisors"
   },
   "306476": {
@@ -15495,46 +15495,6 @@
     "sourceLink": "https://www.adviserinfo.sec.gov/firm/summary/329369",
     "matchReason": "Strong pattern: 'capital llc'"
   },
-  "329821": {
-    "firmName": "CORR CAPITAL MANAGEMENT LLC",
-    "crd": "329821",
-    "city": "SAN FRANCISCO",
-    "state": "CA",
-    "sourceLink": "https://www.adviserinfo.sec.gov/firm/summary/329821",
-    "matchReason": "Strong pattern: 'capital management llc'"
-  },
-  "331224": {
-    "firmName": "MUSA CAPITAL MANAGEMENT, LLC",
-    "crd": "331224",
-    "city": "PALO ALTO",
-    "state": "CA",
-    "sourceLink": "https://www.adviserinfo.sec.gov/firm/summary/331224",
-    "matchReason": "Strong pattern: 'capital management llc'"
-  },
-  "329393": {
-    "firmName": "VIBE CAPITAL MANAGEMENT LLC",
-    "crd": "329393",
-    "city": "SAN FRANCISCO",
-    "state": "CA",
-    "sourceLink": "https://www.adviserinfo.sec.gov/firm/summary/329393",
-    "matchReason": "Strong pattern: 'capital management llc'"
-  },
-  "331430": {
-    "firmName": "DIRA CAPITAL MANAGEMENT LLC",
-    "crd": "331430",
-    "city": "NASHVILLE",
-    "state": "TN",
-    "sourceLink": "https://www.adviserinfo.sec.gov/firm/summary/331430",
-    "matchReason": "Strong pattern: 'capital management llc'"
-  },
-  "315136": {
-    "firmName": "CD55 CAPITAL MANAGEMENT, LLC",
-    "crd": "315136",
-    "city": "BALTIMORE",
-    "state": "MD",
-    "sourceLink": "https://www.adviserinfo.sec.gov/firm/summary/315136",
-    "matchReason": "Strong pattern: 'capital management llc'"
-  },
   "161397": {
     "firmName": "LAMOND CAPITAL PARTNERS LLC",
     "crd": "161397",
@@ -15549,6 +15509,46 @@
     "city": "CARMEL",
     "state": "IN",
     "sourceLink": "https://www.adviserinfo.sec.gov/firm/summary/147514",
+    "matchReason": "Strong pattern: 'capital management llc'"
+  },
+  "331430": {
+    "firmName": "DIRA CAPITAL MANAGEMENT LLC",
+    "crd": "331430",
+    "city": "NASHVILLE",
+    "state": "TN",
+    "sourceLink": "https://www.adviserinfo.sec.gov/firm/summary/331430",
+    "matchReason": "Strong pattern: 'capital management llc'"
+  },
+  "331224": {
+    "firmName": "MUSA CAPITAL MANAGEMENT, LLC",
+    "crd": "331224",
+    "city": "PALO ALTO",
+    "state": "CA",
+    "sourceLink": "https://www.adviserinfo.sec.gov/firm/summary/331224",
+    "matchReason": "Strong pattern: 'capital management llc'"
+  },
+  "315136": {
+    "firmName": "CD55 CAPITAL MANAGEMENT, LLC",
+    "crd": "315136",
+    "city": "BALTIMORE",
+    "state": "MD",
+    "sourceLink": "https://www.adviserinfo.sec.gov/firm/summary/315136",
+    "matchReason": "Strong pattern: 'capital management llc'"
+  },
+  "329393": {
+    "firmName": "VIBE CAPITAL MANAGEMENT LLC",
+    "crd": "329393",
+    "city": "SAN FRANCISCO",
+    "state": "CA",
+    "sourceLink": "https://www.adviserinfo.sec.gov/firm/summary/329393",
+    "matchReason": "Strong pattern: 'capital management llc'"
+  },
+  "329821": {
+    "firmName": "CORR CAPITAL MANAGEMENT LLC",
+    "crd": "329821",
+    "city": "SAN FRANCISCO",
+    "state": "CA",
+    "sourceLink": "https://www.adviserinfo.sec.gov/firm/summary/329821",
     "matchReason": "Strong pattern: 'capital management llc'"
   },
   "306013": {
@@ -19103,14 +19103,6 @@
     "sourceLink": "https://www.adviserinfo.sec.gov/firm/summary/305774",
     "matchReason": "Score 15: management llc"
   },
-  "319022": {
-    "firmName": "14B CAPITAL MANAGEMENT LP",
-    "crd": "319022",
-    "city": "LA JOLLA",
-    "state": "CA",
-    "sourceLink": "https://www.adviserinfo.sec.gov/firm/summary/319022",
-    "matchReason": "Strong pattern: 'capital management lp'"
-  },
   "305706": {
     "firmName": "EXOS ASSET MANAGEMENT LLC",
     "crd": "305706",
@@ -21631,6 +21623,14 @@
     "sourceLink": "https://www.adviserinfo.sec.gov/firm/summary/111837",
     "matchReason": "Strong pattern: 'asset management'"
   },
+  "281647": {
+    "firmName": "KONARK ASSET MANAGEMENT LLC",
+    "crd": "281647",
+    "city": "SCOTTSDALE",
+    "state": "AZ",
+    "sourceLink": "https://www.adviserinfo.sec.gov/firm/summary/281647",
+    "matchReason": "Strong pattern: 'asset management llc'"
+  },
   "126029": {
     "firmName": "BLUE CREEK ASSET MANAGEMENT",
     "crd": "126029",
@@ -21638,14 +21638,6 @@
     "state": "TN",
     "sourceLink": "https://www.adviserinfo.sec.gov/firm/summary/126029",
     "matchReason": "Strong pattern: 'asset management'"
-  },
-  "326681": {
-    "firmName": "AVANA CREDIT MANAGEMENT LLC",
-    "crd": "326681",
-    "city": "PEORIA",
-    "state": "AZ",
-    "sourceLink": "https://www.adviserinfo.sec.gov/firm/summary/326681",
-    "matchReason": "Score 15: management llc"
   },
   "297389": {
     "firmName": "FALKEN ASSET MANAGEMENT LLC",
@@ -21655,6 +21647,14 @@
     "sourceLink": "https://www.adviserinfo.sec.gov/firm/summary/297389",
     "matchReason": "Strong pattern: 'asset management llc'"
   },
+  "326681": {
+    "firmName": "AVANA CREDIT MANAGEMENT LLC",
+    "crd": "326681",
+    "city": "PEORIA",
+    "state": "AZ",
+    "sourceLink": "https://www.adviserinfo.sec.gov/firm/summary/326681",
+    "matchReason": "Score 15: management llc"
+  },
   "323757": {
     "firmName": "AI OPERATORS MANAGEMENT, LLC",
     "crd": "323757",
@@ -21662,14 +21662,6 @@
     "state": "MA",
     "sourceLink": "https://www.adviserinfo.sec.gov/firm/summary/323757",
     "matchReason": "Score 15: management llc"
-  },
-  "281647": {
-    "firmName": "KONARK ASSET MANAGEMENT LLC",
-    "crd": "281647",
-    "city": "SCOTTSDALE",
-    "state": "AZ",
-    "sourceLink": "https://www.adviserinfo.sec.gov/firm/summary/281647",
-    "matchReason": "Strong pattern: 'asset management llc'"
   },
   "312717": {
     "firmName": "HIPPO HEALTH MANAGEMENT LLC",
@@ -21759,14 +21751,6 @@
     "sourceLink": "https://www.adviserinfo.sec.gov/firm/summary/173823",
     "matchReason": "Strong pattern: 'asset management'"
   },
-  "226518": {
-    "firmName": "REGATTA LOAN MANAGEMENT LLC",
-    "crd": "226518",
-    "city": "NEW YORK",
-    "state": "NY",
-    "sourceLink": "https://www.adviserinfo.sec.gov/firm/summary/226518",
-    "matchReason": "Score 15: management llc"
-  },
   "167478": {
     "firmName": "STRIVE ASSET MANAGEMENT, LLC",
     "crd": "167478",
@@ -21775,13 +21759,13 @@
     "sourceLink": "https://www.adviserinfo.sec.gov/firm/summary/167478",
     "matchReason": "Strong pattern: 'asset management llc'"
   },
-  "327452": {
-    "firmName": "SORYN IP CAPITAL MANAGEMENT",
-    "crd": "327452",
-    "city": "MILLBURN",
-    "state": "NJ",
-    "sourceLink": "https://www.adviserinfo.sec.gov/firm/summary/327452",
-    "matchReason": "Strong pattern: 'capital management'"
+  "226518": {
+    "firmName": "REGATTA LOAN MANAGEMENT LLC",
+    "crd": "226518",
+    "city": "NEW YORK",
+    "state": "NY",
+    "sourceLink": "https://www.adviserinfo.sec.gov/firm/summary/226518",
+    "matchReason": "Score 15: management llc"
   },
   "271031": {
     "firmName": "TETON EQUITY MANAGEMENT, LLC",
@@ -21790,6 +21774,14 @@
     "state": "TX",
     "sourceLink": "https://www.adviserinfo.sec.gov/firm/summary/271031",
     "matchReason": "Score 15: management llc"
+  },
+  "327452": {
+    "firmName": "SORYN IP CAPITAL MANAGEMENT",
+    "crd": "327452",
+    "city": "MILLBURN",
+    "state": "NJ",
+    "sourceLink": "https://www.adviserinfo.sec.gov/firm/summary/327452",
+    "matchReason": "Strong pattern: 'capital management'"
   },
   "336384": {
     "firmName": "MRWM CAPITAL MANAGEMENT, LLC",
@@ -24671,6 +24663,14 @@
     "sourceLink": "https://www.adviserinfo.sec.gov/firm/summary/335018",
     "matchReason": "Score 15: management llc"
   },
+  "291562": {
+    "firmName": "ARYEH CAPITAL MANAGEMENT, LTD.",
+    "crd": "291562",
+    "city": "TORONTO, ONTARIO",
+    "state": "",
+    "sourceLink": "https://www.adviserinfo.sec.gov/firm/summary/291562",
+    "matchReason": "Strong pattern: 'capital management ltd'"
+  },
   "298694": {
     "firmName": "KAVOD CAPITAL MANAGEMENT LLC",
     "crd": "298694",
@@ -24694,14 +24694,6 @@
     "state": "CA",
     "sourceLink": "https://www.adviserinfo.sec.gov/firm/summary/170185",
     "matchReason": "Strong pattern: 'capital management lp'"
-  },
-  "291562": {
-    "firmName": "ARYEH CAPITAL MANAGEMENT, LTD.",
-    "crd": "291562",
-    "city": "TORONTO, ONTARIO",
-    "state": "",
-    "sourceLink": "https://www.adviserinfo.sec.gov/firm/summary/291562",
-    "matchReason": "Strong pattern: 'capital management ltd'"
   },
   "114428": {
     "firmName": "BARES CAPITAL MANAGEMENT, INC.",
@@ -24750,6 +24742,14 @@
     "state": "MA",
     "sourceLink": "https://www.adviserinfo.sec.gov/firm/summary/159504",
     "matchReason": "Strong pattern: 'capital management'"
+  },
+  "305203": {
+    "firmName": "MITRA CAPITAL MANAGEMENT LLC",
+    "crd": "305203",
+    "city": "BOSTON",
+    "state": "MA",
+    "sourceLink": "https://www.adviserinfo.sec.gov/firm/summary/305203",
+    "matchReason": "Strong pattern: 'capital management llc'"
   },
   "289136": {
     "firmName": "MARCADO ASSET MANAGEMENT LLC",
@@ -28135,14 +28135,6 @@
     "sourceLink": "https://www.adviserinfo.sec.gov/firm/summary/304843",
     "matchReason": "Strong pattern: 'capital management llc'"
   },
-  "327659": {
-    "firmName": "GRIZZLY PEAK ASSET MANAGEMENT",
-    "crd": "327659",
-    "city": "FOLSOM",
-    "state": "CA",
-    "sourceLink": "https://www.adviserinfo.sec.gov/firm/summary/327659",
-    "matchReason": "Strong pattern: 'asset management'"
-  },
   "289198": {
     "firmName": "MILOPARK ASSET MANAGEMENT LLC",
     "crd": "289198",
@@ -28151,21 +28143,13 @@
     "sourceLink": "https://www.adviserinfo.sec.gov/firm/summary/289198",
     "matchReason": "Strong pattern: 'asset management llc'"
   },
-  "317766": {
-    "firmName": "TIJERO CAPITAL MANAGEMENT LLC",
-    "crd": "317766",
-    "city": "LOS ANGELES",
+  "322980": {
+    "firmName": "OPERATOR STACK MANAGEMENT LLC",
+    "crd": "322980",
+    "city": "DANVILLE",
     "state": "CA",
-    "sourceLink": "https://www.adviserinfo.sec.gov/firm/summary/317766",
-    "matchReason": "Strong pattern: 'capital management llc'"
-  },
-  "328825": {
-    "firmName": "QTRADE CAPITAL MANAGEMENT, LLC",
-    "crd": "328825",
-    "city": "SCOTTSDALE",
-    "state": "AZ",
-    "sourceLink": "https://www.adviserinfo.sec.gov/firm/summary/328825",
-    "matchReason": "Strong pattern: 'capital management llc'"
+    "sourceLink": "https://www.adviserinfo.sec.gov/firm/summary/322980",
+    "matchReason": "Score 15: management llc"
   },
   "169575": {
     "firmName": "OROGEN CAPITAL MANAGEMENT LLC",
@@ -28191,13 +28175,29 @@
     "sourceLink": "https://www.adviserinfo.sec.gov/firm/summary/112122",
     "matchReason": "Strong pattern: 'investment management'"
   },
-  "322980": {
-    "firmName": "OPERATOR STACK MANAGEMENT LLC",
-    "crd": "322980",
-    "city": "DANVILLE",
+  "328825": {
+    "firmName": "QTRADE CAPITAL MANAGEMENT, LLC",
+    "crd": "328825",
+    "city": "SCOTTSDALE",
+    "state": "AZ",
+    "sourceLink": "https://www.adviserinfo.sec.gov/firm/summary/328825",
+    "matchReason": "Strong pattern: 'capital management llc'"
+  },
+  "317766": {
+    "firmName": "TIJERO CAPITAL MANAGEMENT LLC",
+    "crd": "317766",
+    "city": "LOS ANGELES",
     "state": "CA",
-    "sourceLink": "https://www.adviserinfo.sec.gov/firm/summary/322980",
-    "matchReason": "Score 15: management llc"
+    "sourceLink": "https://www.adviserinfo.sec.gov/firm/summary/317766",
+    "matchReason": "Strong pattern: 'capital management llc'"
+  },
+  "327659": {
+    "firmName": "GRIZZLY PEAK ASSET MANAGEMENT",
+    "crd": "327659",
+    "city": "FOLSOM",
+    "state": "CA",
+    "sourceLink": "https://www.adviserinfo.sec.gov/firm/summary/327659",
+    "matchReason": "Strong pattern: 'asset management'"
   },
   "313782": {
     "firmName": "VIRTUOSO ASSET MANAGEMENT LLC",
@@ -28271,21 +28271,13 @@
     "sourceLink": "https://www.adviserinfo.sec.gov/firm/summary/107491",
     "matchReason": "Strong pattern: 'capital management'"
   },
-  "338443": {
-    "firmName": "ATURAN CAPITAL MANAGEMENT, LLC",
-    "crd": "338443",
-    "city": "EAST PATCHOGUE",
-    "state": "NY",
-    "sourceLink": "https://www.adviserinfo.sec.gov/firm/summary/338443",
-    "matchReason": "Strong pattern: 'capital management llc'"
-  },
-  "149587": {
-    "firmName": "CRABTREE ASSET MANAGEMENT  L.L.C.",
-    "crd": "149587",
-    "city": "SAINT PAUL",
-    "state": "MN",
-    "sourceLink": "https://www.adviserinfo.sec.gov/firm/summary/149587",
-    "matchReason": "Strong pattern: 'asset management llc'"
+  "292445": {
+    "firmName": "ASG INVESTMENT MANAGEMENT, LLC",
+    "crd": "292445",
+    "city": "RENFREW",
+    "state": "PA",
+    "sourceLink": "https://www.adviserinfo.sec.gov/firm/summary/292445",
+    "matchReason": "Strong pattern: 'investment management'"
   },
   "153022": {
     "firmName": "AQUILO CAPITAL MANAGEMENT, LLC",
@@ -28295,13 +28287,13 @@
     "sourceLink": "https://www.adviserinfo.sec.gov/firm/summary/153022",
     "matchReason": "Strong pattern: 'capital management llc'"
   },
-  "336686": {
-    "firmName": "KARANA CAPITAL MANAGEMENT LLC",
-    "crd": "336686",
-    "city": "NEW YORK",
-    "state": "NY",
-    "sourceLink": "https://www.adviserinfo.sec.gov/firm/summary/336686",
-    "matchReason": "Strong pattern: 'capital management llc'"
+  "122997": {
+    "firmName": "LONGVIEW ASSET MANAGEMENT, LLC",
+    "crd": "122997",
+    "city": "SANTA FE",
+    "state": "NM",
+    "sourceLink": "https://www.adviserinfo.sec.gov/firm/summary/122997",
+    "matchReason": "Strong pattern: 'asset management llc'"
   },
   "166133": {
     "firmName": "STRINGER ASSET MANAGEMENT, LLC",
@@ -28310,6 +28302,14 @@
     "state": "TN",
     "sourceLink": "https://www.adviserinfo.sec.gov/firm/summary/166133",
     "matchReason": "Strong pattern: 'asset management llc'"
+  },
+  "336686": {
+    "firmName": "KARANA CAPITAL MANAGEMENT LLC",
+    "crd": "336686",
+    "city": "NEW YORK",
+    "state": "NY",
+    "sourceLink": "https://www.adviserinfo.sec.gov/firm/summary/336686",
+    "matchReason": "Strong pattern: 'capital management llc'"
   },
   "312962": {
     "firmName": "WESTLAKE ASSET MANAGEMENT, LLC",
@@ -28351,12 +28351,12 @@
     "sourceLink": "https://www.adviserinfo.sec.gov/firm/summary/166360",
     "matchReason": "Strong pattern: 'partners llc'"
   },
-  "122997": {
-    "firmName": "LONGVIEW ASSET MANAGEMENT, LLC",
-    "crd": "122997",
-    "city": "SANTA FE",
-    "state": "NM",
-    "sourceLink": "https://www.adviserinfo.sec.gov/firm/summary/122997",
+  "149587": {
+    "firmName": "CRABTREE ASSET MANAGEMENT  L.L.C.",
+    "crd": "149587",
+    "city": "SAINT PAUL",
+    "state": "MN",
+    "sourceLink": "https://www.adviserinfo.sec.gov/firm/summary/149587",
     "matchReason": "Strong pattern: 'asset management llc'"
   },
   "327048": {
@@ -30094,6 +30094,17 @@
     "state": "CA",
     "sourceLink": "https://www.adviserinfo.sec.gov/firm/summary/149678",
     "matchReason": "Strong pattern: 'asset management'"
+  },
+  "334162": {
+    "firmName": "EAST COAST ASSET MANAGEMENT SEZC",
+    "crd": "334162",
+    "city": "GEORGE TOWN",
+    "state": "",
+    "sourceLink": "https://www.adviserinfo.sec.gov/firm/summary/334162",
+    "matchReason": "Strong pattern: 'asset management'",
+    "effectiveDate": "8/19/2026",
+    "jurisdiction": "SEC",
+    "statusType": "ERA - Withdrawn"
   },
   "146839": {
     "firmName": "STEWARDSHIP ASSET MANAGEMENT, LLC",
@@ -32063,46 +32074,6 @@
     "sourceLink": "https://www.adviserinfo.sec.gov/firm/summary/286666",
     "matchReason": "Strong pattern: 'asset management llc'"
   },
-  "109192": {
-    "firmName": "WELLS FARGO ASSET MANAGEMENT (INTERNATIONAL), LLC",
-    "crd": "109192",
-    "city": "LONDON",
-    "state": "",
-    "sourceLink": "https://www.adviserinfo.sec.gov/firm/summary/109192",
-    "matchReason": "Strong pattern: 'asset management'"
-  },
-  "161262": {
-    "firmName": "BNP PARIBAS ASSET MANAGEMENT SINGAPORE LIMITED",
-    "crd": "161262",
-    "city": "SINGAPORE",
-    "state": "",
-    "sourceLink": "https://www.adviserinfo.sec.gov/firm/summary/161262",
-    "matchReason": "Strong pattern: 'asset management'"
-  },
-  "161590": {
-    "firmName": "DELANCEY REAL ESTATE ASSET MANAGEMENT LIMITED",
-    "crd": "161590",
-    "city": "LONDON",
-    "state": "",
-    "sourceLink": "https://www.adviserinfo.sec.gov/firm/summary/161590",
-    "matchReason": "Strong pattern: 'asset management'"
-  },
-  "129708": {
-    "firmName": "FINANCIAL SERVICES CENTER ASSET MANAGEMENT INC.",
-    "crd": "129708",
-    "city": "RED HOOK",
-    "state": "NY",
-    "sourceLink": "https://www.adviserinfo.sec.gov/firm/summary/129708",
-    "matchReason": "Strong pattern: 'asset management'"
-  },
-  "311510": {
-    "firmName": "BOMBARDIER GLOBAL PENSION ASSET MANAGEMENT INC.",
-    "crd": "311510",
-    "city": "DORVAL, QUEBEC",
-    "state": "",
-    "sourceLink": "https://www.adviserinfo.sec.gov/firm/summary/311510",
-    "matchReason": "Strong pattern: 'asset management'"
-  },
   "283218": {
     "firmName": "ICBC CREDIT SUISSE ASSET MANAGEMENT (INT'L) CO. LTD",
     "crd": "283218",
@@ -32238,14 +32209,6 @@
     "state": "",
     "sourceLink": "https://www.adviserinfo.sec.gov/firm/summary/145421",
     "matchReason": "Strong pattern: 'asset management'"
-  },
-  "114924": {
-    "firmName": "PARALLAX INVESTMENTS, LLC",
-    "crd": "114924",
-    "city": "HOUSTON",
-    "state": "TX",
-    "sourceLink": "https://www.adviserinfo.sec.gov/firm/summary/114924",
-    "matchReason": "Score 14: investments llc"
   },
   "153986": {
     "firmName": "WESTERN ASSET MANAGEMENT COMPANY DISTRIBUIDORA DE T\u00cdTULOS E VALO",
@@ -32399,14 +32362,6 @@
     "sourceLink": "https://www.adviserinfo.sec.gov/firm/summary/160531",
     "matchReason": "Strong pattern: 'capital management'"
   },
-  "163279": {
-    "firmName": "INDIAN CREEK CAPITAL MANAGEMENT LLC",
-    "crd": "163279",
-    "city": "SURFSIDE",
-    "state": "FL",
-    "sourceLink": "https://www.adviserinfo.sec.gov/firm/summary/163279",
-    "matchReason": "Strong pattern: 'capital management llc'"
-  },
   "113961": {
     "firmName": "PRUDEO PARTNERS, LLC",
     "crd": "113961",
@@ -32447,14 +32402,6 @@
     "sourceLink": "https://www.adviserinfo.sec.gov/firm/summary/150874",
     "matchReason": "Score 23: investment counsel"
   },
-  "111598": {
-    "firmName": "COLUMBIA THREADNEEDLE MANAGEMENT LIMITED",
-    "crd": "111598",
-    "city": "LONDON",
-    "state": "",
-    "sourceLink": "https://www.adviserinfo.sec.gov/firm/summary/111598",
-    "matchReason": "Score 15: management limited"
-  },
   "164127": {
     "firmName": "TIDECHANGE CAPITAL PARTNERS, LLC",
     "crd": "164127",
@@ -32462,6 +32409,14 @@
     "state": "CA",
     "sourceLink": "https://www.adviserinfo.sec.gov/firm/summary/164127",
     "matchReason": "Strong pattern: 'capital partners'"
+  },
+  "111598": {
+    "firmName": "COLUMBIA THREADNEEDLE MANAGEMENT LIMITED",
+    "crd": "111598",
+    "city": "LONDON",
+    "state": "",
+    "sourceLink": "https://www.adviserinfo.sec.gov/firm/summary/111598",
+    "matchReason": "Score 15: management limited"
   },
   "169829": {
     "firmName": "BNY MELLON INVESTMENT MANAGEMENT JAPAN LIMITED",
@@ -32495,14 +32450,6 @@
     "sourceLink": "https://www.adviserinfo.sec.gov/firm/summary/139321",
     "matchReason": "Strong pattern: 'partners llc'"
   },
-  "283338": {
-    "firmName": "ALVAREZ & MARSAL ZOHAR MANAGEMENT, LLC",
-    "crd": "283338",
-    "city": "NEW YORK",
-    "state": "NY",
-    "sourceLink": "https://www.adviserinfo.sec.gov/firm/summary/283338",
-    "matchReason": "Score 15: management llc"
-  },
   "133309": {
     "firmName": "THORNE TRADING & INVESTMENT MANAGEMENT",
     "crd": "133309",
@@ -32510,6 +32457,14 @@
     "state": "OR",
     "sourceLink": "https://www.adviserinfo.sec.gov/firm/summary/133309",
     "matchReason": "Strong pattern: 'investment management'"
+  },
+  "283338": {
+    "firmName": "ALVAREZ & MARSAL ZOHAR MANAGEMENT, LLC",
+    "crd": "283338",
+    "city": "NEW YORK",
+    "state": "NY",
+    "sourceLink": "https://www.adviserinfo.sec.gov/firm/summary/283338",
+    "matchReason": "Score 15: management llc"
   },
   "142931": {
     "firmName": "ANTHONY INVESTMENT MANAGEMENT, INC.",
@@ -33839,6 +33794,14 @@
     "sourceLink": "https://www.adviserinfo.sec.gov/firm/summary/164745",
     "matchReason": "Score 14: investments llc"
   },
+  "114924": {
+    "firmName": "PARALLAX INVESTMENTS, LLC",
+    "crd": "114924",
+    "city": "HOUSTON",
+    "state": "TX",
+    "sourceLink": "https://www.adviserinfo.sec.gov/firm/summary/114924",
+    "matchReason": "Score 14: investments llc"
+  },
   "144987": {
     "firmName": "KEVIN BAY INVESTMENTS, LLC",
     "crd": "144987",
@@ -34798,14 +34761,6 @@
     "state": "LA",
     "sourceLink": "https://www.adviserinfo.sec.gov/firm/summary/321766",
     "matchReason": "Strong pattern: 'partners llc'"
-  },
-  "292445": {
-    "firmName": "ASG INVESTMENT MANAGEMENT, LLC",
-    "crd": "292445",
-    "city": "RENFREW",
-    "state": "PA",
-    "sourceLink": "https://www.adviserinfo.sec.gov/firm/summary/292445",
-    "matchReason": "Strong pattern: 'investment management'"
   },
   "118570": {
     "firmName": "M. GRIER INVESTMENT COUNSEL, INC.",
@@ -37071,14 +37026,6 @@
     "sourceLink": "https://www.adviserinfo.sec.gov/firm/summary/164126",
     "matchReason": "Strong pattern: 'investment management'"
   },
-  "114466": {
-    "firmName": "MULLINS INVESTMENT MANAGEMENT, INC.",
-    "crd": "114466",
-    "city": "IDENVER",
-    "state": "CO",
-    "sourceLink": "https://www.adviserinfo.sec.gov/firm/summary/114466",
-    "matchReason": "Strong pattern: 'investment management'"
-  },
   "112200": {
     "firmName": "W1M INVESTMENT MANAGEMENT LIMITED",
     "crd": "112200",
@@ -37086,6 +37033,14 @@
     "state": "",
     "sourceLink": "https://www.adviserinfo.sec.gov/firm/summary/112200",
     "matchReason": "Strong pattern: 'investment management limited'"
+  },
+  "114466": {
+    "firmName": "MULLINS INVESTMENT MANAGEMENT, INC.",
+    "crd": "114466",
+    "city": "IDENVER",
+    "state": "CO",
+    "sourceLink": "https://www.adviserinfo.sec.gov/firm/summary/114466",
+    "matchReason": "Strong pattern: 'investment management'"
   },
   "338867": {
     "firmName": "TILLMAN INVESTMENT MANAGEMENT, LLC",
@@ -39223,22 +39178,6 @@
     "sourceLink": "https://www.adviserinfo.sec.gov/firm/summary/309038",
     "matchReason": "Score 18: management llc"
   },
-  "109077": {
-    "firmName": "AXA ROSENBERG INVESTMENT MANAGEMENT LLC",
-    "crd": "109077",
-    "city": "ORINDA",
-    "state": "CA",
-    "sourceLink": "https://www.adviserinfo.sec.gov/firm/summary/109077",
-    "matchReason": "Strong pattern: 'investment management'"
-  },
-  "285213": {
-    "firmName": "TORTOISEECOFIN INVESTMENTS PARTNERS, LLC",
-    "crd": "285213",
-    "city": "OVERLAND PARK",
-    "state": "KS",
-    "sourceLink": "https://www.adviserinfo.sec.gov/firm/summary/285213",
-    "matchReason": "Strong pattern: 'partners llc'"
-  },
   "298382": {
     "firmName": "LFAM INVESTMENT COUNSEL AND ADVISORS LLC",
     "crd": "298382",
@@ -39286,6 +39225,14 @@
     "state": "TX",
     "sourceLink": "https://www.adviserinfo.sec.gov/firm/summary/307456",
     "matchReason": "Score 14: investments llc"
+  },
+  "285213": {
+    "firmName": "TORTOISEECOFIN INVESTMENTS PARTNERS, LLC",
+    "crd": "285213",
+    "city": "OVERLAND PARK",
+    "state": "KS",
+    "sourceLink": "https://www.adviserinfo.sec.gov/firm/summary/285213",
+    "matchReason": "Strong pattern: 'partners llc'"
   },
   "111631": {
     "firmName": "MUNICREST INVESTMENT MANAGEMENT COMPANY, LLC",
@@ -40031,14 +39978,6 @@
     "sourceLink": "https://www.adviserinfo.sec.gov/firm/summary/289025",
     "matchReason": "Strong pattern: 'investment management'"
   },
-  "34815": {
-    "firmName": "VOYA FINANCIAL PARTNERS, LLC",
-    "crd": "34815",
-    "city": "WINDSOR",
-    "state": "CT",
-    "sourceLink": "https://www.adviserinfo.sec.gov/firm/summary/34815",
-    "matchReason": "Strong pattern: 'partners llc'"
-  },
   "104980": {
     "firmName": "JAMES F. MAINO, REGISTERED INVESTMENT COUNSELLOR, INC.",
     "crd": "104980",
@@ -40070,6 +40009,14 @@
     "state": "",
     "sourceLink": "https://www.adviserinfo.sec.gov/firm/summary/312427",
     "matchReason": "Strong pattern: 'investment management'"
+  },
+  "34815": {
+    "firmName": "VOYA FINANCIAL PARTNERS, LLC",
+    "crd": "34815",
+    "city": "WINDSOR",
+    "state": "CT",
+    "sourceLink": "https://www.adviserinfo.sec.gov/firm/summary/34815",
+    "matchReason": "Strong pattern: 'partners llc'"
   },
   "115784": {
     "firmName": "FINANCIAL SECURITY INVESTMENT MANAGEMENT CORPORATON",
@@ -40174,14 +40121,6 @@
     "state": "FL",
     "sourceLink": "https://www.adviserinfo.sec.gov/firm/summary/141300",
     "matchReason": "Strong pattern: 'partners llc'"
-  },
-  "309016": {
-    "firmName": "DBA/ AUSTIN FIXED INCOME CONSULTING AND INVESTMENT MANAGEMENT",
-    "crd": "309016",
-    "city": "BEE CAVE",
-    "state": "TX",
-    "sourceLink": "https://www.adviserinfo.sec.gov/firm/summary/309016",
-    "matchReason": "Strong pattern: 'investment management'"
   },
   "144589": {
     "firmName": "PRESIDIUM PARTNERS, LLC",
@@ -41118,14 +41057,6 @@
     "state": "",
     "sourceLink": "https://www.adviserinfo.sec.gov/firm/summary/284418",
     "matchReason": "Strong pattern: 'partners llp'"
-  },
-  "140201": {
-    "firmName": "RENVYLE PARTNERS, LLC",
-    "crd": "140201",
-    "city": "DOYLESTOWN",
-    "state": "PA",
-    "sourceLink": "https://www.adviserinfo.sec.gov/firm/summary/140201",
-    "matchReason": "Strong pattern: 'partners llc'"
   },
   "334857": {
     "firmName": "HOLIDAY PARTNERS LLC",
@@ -46103,20 +46034,20 @@
     "sourceLink": "https://www.adviserinfo.sec.gov/firm/summary/142367",
     "matchReason": "Strong pattern: 'capital management llc'"
   },
-  "108696": {
-    "firmName": "THOMAS WEISEL CAPITAL MANAGEMENT LLC",
-    "crd": "108696",
-    "city": "SAN FRANCISCO",
-    "state": "CA",
-    "sourceLink": "https://www.adviserinfo.sec.gov/firm/summary/108696",
-    "matchReason": "Strong pattern: 'capital management llc'"
-  },
   "143872": {
     "firmName": "GLENVILLE CAPITAL MANAGEMENT, LLC",
     "crd": "143872",
     "city": "ARDSLEY",
     "state": "NY",
     "sourceLink": "https://www.adviserinfo.sec.gov/firm/summary/143872",
+    "matchReason": "Strong pattern: 'capital management llc'"
+  },
+  "108696": {
+    "firmName": "THOMAS WEISEL CAPITAL MANAGEMENT LLC",
+    "crd": "108696",
+    "city": "SAN FRANCISCO",
+    "state": "CA",
+    "sourceLink": "https://www.adviserinfo.sec.gov/firm/summary/108696",
     "matchReason": "Strong pattern: 'capital management llc'"
   },
   "321080": {
@@ -46143,14 +46074,6 @@
     "sourceLink": "https://www.adviserinfo.sec.gov/firm/summary/163460",
     "matchReason": "Score 23: capital advisors"
   },
-  "281791": {
-    "firmName": "AVENTICUM CAPITAL MANAGEMENT (SWITZERLAND) LTD",
-    "crd": "281791",
-    "city": "ZURICH",
-    "state": "",
-    "sourceLink": "https://www.adviserinfo.sec.gov/firm/summary/281791",
-    "matchReason": "Strong pattern: 'capital management'"
-  },
   "160013": {
     "firmName": "MISTRAL CAPITAL MANAGEMENT, LLC",
     "crd": "160013",
@@ -46166,6 +46089,14 @@
     "state": "NY",
     "sourceLink": "https://www.adviserinfo.sec.gov/firm/summary/175192",
     "matchReason": "Strong pattern: 'capital management llc'"
+  },
+  "281791": {
+    "firmName": "AVENTICUM CAPITAL MANAGEMENT (SWITZERLAND) LTD",
+    "crd": "281791",
+    "city": "ZURICH",
+    "state": "",
+    "sourceLink": "https://www.adviserinfo.sec.gov/firm/summary/281791",
+    "matchReason": "Strong pattern: 'capital management'"
   },
   "163091": {
     "firmName": "KNIGHT'S BRIDGE CAPITAL MANAGEMENT, L.P.",
@@ -46214,6 +46145,14 @@
     "state": "SC",
     "sourceLink": "https://www.adviserinfo.sec.gov/firm/summary/145460",
     "matchReason": "Score 23: capital advisors"
+  },
+  "161262": {
+    "firmName": "BNP PARIBAS ASSET MANAGEMENT SINGAPORE LIMITED",
+    "crd": "161262",
+    "city": "SINGAPORE",
+    "state": "",
+    "sourceLink": "https://www.adviserinfo.sec.gov/firm/summary/161262",
+    "matchReason": "Strong pattern: 'asset management'"
   },
   "147805": {
     "firmName": "BLUEGRASS CAPITAL ADVISORS, LLC",
@@ -46326,6 +46265,14 @@
     "state": "MA",
     "sourceLink": "https://www.adviserinfo.sec.gov/firm/summary/146680",
     "matchReason": "Exact whitelist: THE FINANCIAL ADVISORS, LLC"
+  },
+  "317017": {
+    "firmName": "LYNX1 CAPITAL ADVISORS LLC",
+    "crd": "317017",
+    "city": "SAN JUAN",
+    "state": "PR",
+    "sourceLink": "https://www.adviserinfo.sec.gov/firm/summary/317017",
+    "matchReason": "Score 23: capital advisors"
   },
   "161863": {
     "firmName": "ONE EAST CAPITAL ADVISORS, L.P.",
@@ -47639,14 +47586,6 @@
     "sourceLink": "https://www.adviserinfo.sec.gov/firm/summary/108049",
     "matchReason": "Score 15: management llc"
   },
-  "148094": {
-    "firmName": "CARA PORTFOLIO MANAGEMENT LIMITED",
-    "crd": "148094",
-    "city": "NASSAU",
-    "state": "",
-    "sourceLink": "https://www.adviserinfo.sec.gov/firm/summary/148094",
-    "matchReason": "Score 15: management limited"
-  },
   "153588": {
     "firmName": "PRAIRIE CAPITAL MANAGEMENT, LLC",
     "crd": "153588",
@@ -47662,6 +47601,14 @@
     "state": "NY",
     "sourceLink": "https://www.adviserinfo.sec.gov/firm/summary/130263",
     "matchReason": "Score 15: management lp"
+  },
+  "148094": {
+    "firmName": "CARA PORTFOLIO MANAGEMENT LIMITED",
+    "crd": "148094",
+    "city": "NASSAU",
+    "state": "",
+    "sourceLink": "https://www.adviserinfo.sec.gov/firm/summary/148094",
+    "matchReason": "Score 15: management limited"
   },
   "173996": {
     "firmName": "NEXTCAPITAL ADVISERS",
@@ -47895,6 +47842,14 @@
     "sourceLink": "https://www.adviserinfo.sec.gov/firm/summary/164221",
     "matchReason": "Strong pattern: 'capital management'"
   },
+  "161590": {
+    "firmName": "DELANCEY REAL ESTATE ASSET MANAGEMENT LIMITED",
+    "crd": "161590",
+    "city": "LONDON",
+    "state": "",
+    "sourceLink": "https://www.adviserinfo.sec.gov/firm/summary/161590",
+    "matchReason": "Strong pattern: 'asset management'"
+  },
   "161417": {
     "firmName": "PRAESIDIAN CAPITAL MANAGEMENT II, LLC",
     "crd": "161417",
@@ -47991,14 +47946,6 @@
     "sourceLink": "https://www.adviserinfo.sec.gov/firm/summary/168076",
     "matchReason": "Strong pattern: 'capital management'"
   },
-  "156631": {
-    "firmName": "TRAFELET BROKAW CAPITAL MANAGEMENT, L.P.",
-    "crd": "156631",
-    "city": "NEW YORK",
-    "state": "NY",
-    "sourceLink": "https://www.adviserinfo.sec.gov/firm/summary/156631",
-    "matchReason": "Strong pattern: 'capital management lp'"
-  },
   "164302": {
     "firmName": "MIDWOOD CAPITAL MANAGEMENT LLC",
     "crd": "164302",
@@ -48006,6 +47953,14 @@
     "state": "MA",
     "sourceLink": "https://www.adviserinfo.sec.gov/firm/summary/164302",
     "matchReason": "Strong pattern: 'capital management llc'"
+  },
+  "156631": {
+    "firmName": "TRAFELET BROKAW CAPITAL MANAGEMENT, L.P.",
+    "crd": "156631",
+    "city": "NEW YORK",
+    "state": "NY",
+    "sourceLink": "https://www.adviserinfo.sec.gov/firm/summary/156631",
+    "matchReason": "Strong pattern: 'capital management lp'"
   },
   "160775": {
     "firmName": "BAKER STREET CAPITAL MANAGEMENT, LLC",
@@ -48101,6 +48056,14 @@
     "city": "NEW YORK",
     "state": "NY",
     "sourceLink": "https://www.adviserinfo.sec.gov/firm/summary/313306",
+    "matchReason": "Score 17: management llc"
+  },
+  "337337": {
+    "firmName": "QUANT SIGNALS TRADING MANAGEMENT, LLC",
+    "crd": "337337",
+    "city": "WILLS POINT",
+    "state": "TX",
+    "sourceLink": "https://www.adviserinfo.sec.gov/firm/summary/337337",
     "matchReason": "Score 17: management llc"
   },
   "312730": {
@@ -48847,14 +48810,6 @@
     "sourceLink": "https://www.adviserinfo.sec.gov/firm/summary/298499",
     "matchReason": "Score 15: management llc"
   },
-  "117743": {
-    "firmName": "HIGH POINTE CAPITAL MANAGEMENT, LLC",
-    "crd": "117743",
-    "city": "CHICAGO",
-    "state": "IL",
-    "sourceLink": "https://www.adviserinfo.sec.gov/firm/summary/117743",
-    "matchReason": "Strong pattern: 'capital management llc'"
-  },
   "287943": {
     "firmName": "TEXAS QUANT CAPITAL MANAGEMENT LLC",
     "crd": "287943",
@@ -49327,12 +49282,12 @@
     "sourceLink": "https://www.adviserinfo.sec.gov/firm/summary/328951",
     "matchReason": "Strong pattern: 'capital management llc'"
   },
-  "305203": {
-    "firmName": "MITRA CAPITAL MANAGEMENT LLC",
-    "crd": "305203",
-    "city": "BOSTON",
-    "state": "MA",
-    "sourceLink": "https://www.adviserinfo.sec.gov/firm/summary/305203",
+  "338443": {
+    "firmName": "ATURAN CAPITAL MANAGEMENT, LLC",
+    "crd": "338443",
+    "city": "EAST PATCHOGUE",
+    "state": "NY",
+    "sourceLink": "https://www.adviserinfo.sec.gov/firm/summary/338443",
     "matchReason": "Strong pattern: 'capital management llc'"
   },
   "283905": {
@@ -51031,20 +50986,20 @@
     "sourceLink": "https://www.adviserinfo.sec.gov/firm/summary/108182",
     "matchReason": "Strong pattern: 'capital management'"
   },
-  "124697": {
-    "firmName": "VOYAGER CAPITAL MANAGEMENT, LLC",
-    "crd": "124697",
-    "city": "LAKE GENEVA",
-    "state": "WI",
-    "sourceLink": "https://www.adviserinfo.sec.gov/firm/summary/124697",
-    "matchReason": "Strong pattern: 'capital management llc'"
-  },
   "136504": {
     "firmName": "VENTURA CAPITAL MANAGEMENT, LLC",
     "crd": "136504",
     "city": "ST. GEORGE",
     "state": "UT",
     "sourceLink": "https://www.adviserinfo.sec.gov/firm/summary/136504",
+    "matchReason": "Strong pattern: 'capital management llc'"
+  },
+  "124697": {
+    "firmName": "VOYAGER CAPITAL MANAGEMENT, LLC",
+    "crd": "124697",
+    "city": "LAKE GENEVA",
+    "state": "WI",
+    "sourceLink": "https://www.adviserinfo.sec.gov/firm/summary/124697",
     "matchReason": "Strong pattern: 'capital management llc'"
   },
   "110126": {
@@ -51294,30 +51249,6 @@
     "state": "NY",
     "sourceLink": "https://www.adviserinfo.sec.gov/firm/summary/171117",
     "matchReason": "Strong pattern: 'capital management lp'"
-  },
-  "318765": {
-    "firmName": "PONY OIL CAPITAL MANAGEMENT, LLC",
-    "crd": "318765",
-    "city": "HOUSTON",
-    "state": "TX",
-    "sourceLink": "https://www.adviserinfo.sec.gov/firm/summary/318765",
-    "matchReason": "Strong pattern: 'capital management llc'"
-  },
-  "327936": {
-    "firmName": "TWIN DOVS CAPITAL MANAGEMENT LP",
-    "crd": "327936",
-    "city": "NEW YORK",
-    "state": "NY",
-    "sourceLink": "https://www.adviserinfo.sec.gov/firm/summary/327936",
-    "matchReason": "Strong pattern: 'capital management lp'"
-  },
-  "281973": {
-    "firmName": "AZ APICE CAPITAL MANAGEMENT LLC",
-    "crd": "281973",
-    "city": "MIAMI",
-    "state": "FL",
-    "sourceLink": "https://www.adviserinfo.sec.gov/firm/summary/281973",
-    "matchReason": "Strong pattern: 'capital management llc'"
   },
   "307986": {
     "firmName": "118 WEST CAPITAL MANAGEMENT LLC",
@@ -52583,20 +52514,20 @@
     "sourceLink": "https://www.adviserinfo.sec.gov/firm/summary/312452",
     "matchReason": "Strong pattern: 'capital management'"
   },
-  "310755": {
-    "firmName": "TAMARACK CAPITAL MANAGEMENT, LLC",
-    "crd": "310755",
-    "city": "GRAND RAPIDS",
-    "state": "MI",
-    "sourceLink": "https://www.adviserinfo.sec.gov/firm/summary/310755",
-    "matchReason": "Strong pattern: 'capital management llc'"
-  },
   "281819": {
     "firmName": "MAGISTER CAPITAL MANAGEMENT, LLC",
     "crd": "281819",
     "city": "SAN RAMON",
     "state": "CA",
     "sourceLink": "https://www.adviserinfo.sec.gov/firm/summary/281819",
+    "matchReason": "Strong pattern: 'capital management llc'"
+  },
+  "310755": {
+    "firmName": "TAMARACK CAPITAL MANAGEMENT, LLC",
+    "crd": "310755",
+    "city": "GRAND RAPIDS",
+    "state": "MI",
+    "sourceLink": "https://www.adviserinfo.sec.gov/firm/summary/310755",
     "matchReason": "Strong pattern: 'capital management llc'"
   },
   "288282": {
@@ -52679,6 +52610,14 @@
     "sourceLink": "https://www.adviserinfo.sec.gov/firm/summary/106166",
     "matchReason": "Strong pattern: 'capital management'"
   },
+  "129239": {
+    "firmName": "PASHADRE CAPITAL MANAGEMENT, INC",
+    "crd": "129239",
+    "city": "S. WEYMOUTH",
+    "state": "MA",
+    "sourceLink": "https://www.adviserinfo.sec.gov/firm/summary/129239",
+    "matchReason": "Strong pattern: 'capital management'"
+  },
   "292393": {
     "firmName": "ADG CAPITAL MANAGEMENT LLP (\"ADGCM\")",
     "crd": "292393",
@@ -52742,46 +52681,6 @@
     "state": "NY",
     "sourceLink": "https://www.adviserinfo.sec.gov/firm/summary/161506",
     "matchReason": "Strong pattern: 'capital management llc'"
-  },
-  "156203": {
-    "firmName": "WEST FORK CAPITAL MANAGEMENT, LLC",
-    "crd": "156203",
-    "city": "PLANO",
-    "state": "TX",
-    "sourceLink": "https://www.adviserinfo.sec.gov/firm/summary/156203",
-    "matchReason": "Strong pattern: 'capital management llc'"
-  },
-  "166367": {
-    "firmName": "GREEN OWL CAPITAL MANAGEMENT, LLC",
-    "crd": "166367",
-    "city": "NEW YORK",
-    "state": "NY",
-    "sourceLink": "https://www.adviserinfo.sec.gov/firm/summary/166367",
-    "matchReason": "Strong pattern: 'capital management llc'"
-  },
-  "171560": {
-    "firmName": "ONE EARTH CAPITAL MANAGEMENT LLC",
-    "crd": "171560",
-    "city": "SANTA MONICA",
-    "state": "CA",
-    "sourceLink": "https://www.adviserinfo.sec.gov/firm/summary/171560",
-    "matchReason": "Strong pattern: 'capital management llc'"
-  },
-  "124545": {
-    "firmName": "FOUR OAKS CAPITAL MANAGEMENT,LLC",
-    "crd": "124545",
-    "city": "HICKORY",
-    "state": "NC",
-    "sourceLink": "https://www.adviserinfo.sec.gov/firm/summary/124545",
-    "matchReason": "Strong pattern: 'capital management llc'"
-  },
-  "119715": {
-    "firmName": "GOLD LEAF CAPITAL MANAGEMENT, INC.",
-    "crd": "119715",
-    "city": "WILLOWICK",
-    "state": "OH",
-    "sourceLink": "https://www.adviserinfo.sec.gov/firm/summary/119715",
-    "matchReason": "Strong pattern: 'capital management'"
   },
   "138549": {
     "firmName": "ELM RIDGE CAPITAL MANAGEMENT, LLC",
@@ -53855,14 +53754,6 @@
     "sourceLink": "https://www.adviserinfo.sec.gov/firm/summary/141632",
     "matchReason": "Strong pattern: 'capital management'"
   },
-  "282514": {
-    "firmName": "INCEPTION CAPITAL MANAGEMENT LLC",
-    "crd": "282514",
-    "city": "KIRKLAND",
-    "state": "WA",
-    "sourceLink": "https://www.adviserinfo.sec.gov/firm/summary/282514",
-    "matchReason": "Strong pattern: 'capital management llc'"
-  },
   "326522": {
     "firmName": "GREENSIDE CAPITAL MANAGEMENT LLC",
     "crd": "326522",
@@ -53919,14 +53810,6 @@
     "sourceLink": "https://www.adviserinfo.sec.gov/firm/summary/169126",
     "matchReason": "Strong pattern: 'capital management llc'"
   },
-  "127372": {
-    "firmName": "CAPITAL PORTFOLIO MANAGEMENT L.L.C.",
-    "crd": "127372",
-    "city": "TOPEKA",
-    "state": "KS",
-    "sourceLink": "https://www.adviserinfo.sec.gov/firm/summary/127372",
-    "matchReason": "Score 18: management llc"
-  },
   "167606": {
     "firmName": "HAMMELMAN CAPITAL MANAGEMENT LLC",
     "crd": "167606",
@@ -53942,6 +53825,14 @@
     "state": "NV",
     "sourceLink": "https://www.adviserinfo.sec.gov/firm/summary/338170",
     "matchReason": "Strong pattern: 'capital management llc'"
+  },
+  "127372": {
+    "firmName": "CAPITAL PORTFOLIO MANAGEMENT L.L.C.",
+    "crd": "127372",
+    "city": "TOPEKA",
+    "state": "KS",
+    "sourceLink": "https://www.adviserinfo.sec.gov/firm/summary/127372",
+    "matchReason": "Score 18: management llc"
   },
   "332543": {
     "firmName": "FORTUNAFI CAPITAL MANAGEMENT LLC",
@@ -54254,94 +54145,6 @@
     "state": "VA",
     "sourceLink": "https://www.adviserinfo.sec.gov/firm/summary/282666",
     "matchReason": "Strong pattern: 'capital management lp'"
-  },
-  "286126": {
-    "firmName": "CROSS STONE CAPITAL MANAGEMENT LP",
-    "crd": "286126",
-    "city": "PURCHASE",
-    "state": "NY",
-    "sourceLink": "https://www.adviserinfo.sec.gov/firm/summary/286126",
-    "matchReason": "Strong pattern: 'capital management lp'"
-  },
-  "301284": {
-    "firmName": "PAMPLONA CAPITAL MANAGEMENT (PE) S.L.",
-    "crd": "301284",
-    "city": "MADRID",
-    "state": "",
-    "sourceLink": "https://www.adviserinfo.sec.gov/firm/summary/301284",
-    "matchReason": "Strong pattern: 'capital management'"
-  },
-  "307120": {
-    "firmName": "WABAN PARK CAPITAL MANAGEMENT, LLC",
-    "crd": "307120",
-    "city": "WABAN",
-    "state": "MA",
-    "sourceLink": "https://www.adviserinfo.sec.gov/firm/summary/307120",
-    "matchReason": "Strong pattern: 'capital management llc'"
-  },
-  "307374": {
-    "firmName": "DM MARTINS CAPITAL MANAGEMENT, LLC",
-    "crd": "307374",
-    "city": "NAPA",
-    "state": "CA",
-    "sourceLink": "https://www.adviserinfo.sec.gov/firm/summary/307374",
-    "matchReason": "Strong pattern: 'capital management llc'"
-  },
-  "310715": {
-    "firmName": "ALPHA ALTA CAPITAL MANAGEMENT, LLC",
-    "crd": "310715",
-    "city": "SOUTHLAKE",
-    "state": "TX",
-    "sourceLink": "https://www.adviserinfo.sec.gov/firm/summary/310715",
-    "matchReason": "Strong pattern: 'capital management llc'"
-  },
-  "331590": {
-    "firmName": "WEST BASIN CAPITAL MANAGEMENT, LLC",
-    "crd": "331590",
-    "city": "NEW YORK",
-    "state": "NY",
-    "sourceLink": "https://www.adviserinfo.sec.gov/firm/summary/331590",
-    "matchReason": "Strong pattern: 'capital management llc'"
-  },
-  "323832": {
-    "firmName": "LOS ALAMOS CAPITAL MANAGEMENT, LLC",
-    "crd": "323832",
-    "city": "SAN FRANCISCO",
-    "state": "CA",
-    "sourceLink": "https://www.adviserinfo.sec.gov/firm/summary/323832",
-    "matchReason": "Strong pattern: 'capital management llc'"
-  },
-  "111738": {
-    "firmName": "GRAND JEAN CAPITAL MANAGEMENT INC.",
-    "crd": "111738",
-    "city": "SAN FRANCISCO",
-    "state": "CA",
-    "sourceLink": "https://www.adviserinfo.sec.gov/firm/summary/111738",
-    "matchReason": "Strong pattern: 'capital management'"
-  },
-  "159020": {
-    "firmName": "SKY HARBOR CAPITAL MANAGEMENT, LLC",
-    "crd": "159020",
-    "city": "GREENWICH",
-    "state": "CT",
-    "sourceLink": "https://www.adviserinfo.sec.gov/firm/summary/159020",
-    "matchReason": "Strong pattern: 'capital management llc'"
-  },
-  "167573": {
-    "firmName": "GOLDEN EGG CAPITAL MANAGEMENT, LLC",
-    "crd": "167573",
-    "city": "BRENTWOOD",
-    "state": "CA",
-    "sourceLink": "https://www.adviserinfo.sec.gov/firm/summary/167573",
-    "matchReason": "Strong pattern: 'capital management llc'"
-  },
-  "327791": {
-    "firmName": "NORTH POND CAPITAL MANAGEMENT LLC",
-    "crd": "327791",
-    "city": "BOSTON",
-    "state": "MA",
-    "sourceLink": "https://www.adviserinfo.sec.gov/firm/summary/327791",
-    "matchReason": "Strong pattern: 'capital management llc'"
   },
   "285501": {
     "firmName": "WHITE ROCK CAPITAL MANAGEMENT, LLC",
@@ -55207,6 +55010,14 @@
     "sourceLink": "https://www.adviserinfo.sec.gov/firm/summary/145765",
     "matchReason": "Strong pattern: 'capital management llc'"
   },
+  "117743": {
+    "firmName": "HIGH POINTE CAPITAL MANAGEMENT, LLC",
+    "crd": "117743",
+    "city": "CHICAGO",
+    "state": "IL",
+    "sourceLink": "https://www.adviserinfo.sec.gov/firm/summary/117743",
+    "matchReason": "Strong pattern: 'capital management llc'"
+  },
   "130547": {
     "firmName": "SEVEN HILLS CAPITAL MANAGEMENT, INC.",
     "crd": "130547",
@@ -55366,14 +55177,6 @@
     "state": "CA",
     "sourceLink": "https://www.adviserinfo.sec.gov/firm/summary/300769",
     "matchReason": "Strong pattern: 'capital management lp'"
-  },
-  "323630": {
-    "firmName": "WARWICK CAPITAL CLO MANAGEMENT LLC",
-    "crd": "323630",
-    "city": "STAMFORD",
-    "state": "CT",
-    "sourceLink": "https://www.adviserinfo.sec.gov/firm/summary/323630",
-    "matchReason": "Score 18: management llc"
   },
   "292328": {
     "firmName": "THERIUM CAPITAL MANAGEMENT (USA), INC.",
@@ -55749,6 +55552,14 @@
     "city": "TOPEKA",
     "state": "KS",
     "sourceLink": "https://www.adviserinfo.sec.gov/firm/summary/155347",
+    "matchReason": "Strong pattern: 'capital management llc'"
+  },
+  "163279": {
+    "firmName": "INDIAN CREEK CAPITAL MANAGEMENT LLC",
+    "crd": "163279",
+    "city": "SURFSIDE",
+    "state": "FL",
+    "sourceLink": "https://www.adviserinfo.sec.gov/firm/summary/163279",
     "matchReason": "Strong pattern: 'capital management llc'"
   },
   "297481": {
@@ -56150,14 +55961,6 @@
     "state": "",
     "sourceLink": "https://www.adviserinfo.sec.gov/firm/summary/160633",
     "matchReason": "Strong pattern: 'capital management'"
-  },
-  "152248": {
-    "firmName": "AMERICAFIRST CAPITAL MANAGEMENT, LLC",
-    "crd": "152248",
-    "city": "GRANITE BAY",
-    "state": "CA",
-    "sourceLink": "https://www.adviserinfo.sec.gov/firm/summary/152248",
-    "matchReason": "Strong pattern: 'capital management llc'"
   },
   "292193": {
     "firmName": "PRESIDIO VIEW CAPITAL MANAGEMENT, LLC",
@@ -56711,30 +56514,6 @@
     "sourceLink": "https://www.adviserinfo.sec.gov/firm/summary/165322",
     "matchReason": "Strong pattern: 'capital management llc'"
   },
-  "174751": {
-    "firmName": "BEIJING SINUOBO CAPITAL MANAGEMENT LTD",
-    "crd": "174751",
-    "city": "CHAOYANG DISTRICT, BEIJING",
-    "state": "",
-    "sourceLink": "https://www.adviserinfo.sec.gov/firm/summary/174751",
-    "matchReason": "Strong pattern: 'capital management ltd'"
-  },
-  "129596": {
-    "firmName": "THOMAS & ATKINSON CAPITAL MANAGEMENT LLC",
-    "crd": "129596",
-    "city": "MENLO PARK",
-    "state": "CA",
-    "sourceLink": "https://www.adviserinfo.sec.gov/firm/summary/129596",
-    "matchReason": "Strong pattern: 'capital management llc'"
-  },
-  "312421": {
-    "firmName": "ODYSSEY DIGITAL CAPITAL MANAGEMENT, LLC",
-    "crd": "312421",
-    "city": "LAUREL",
-    "state": "MD",
-    "sourceLink": "https://www.adviserinfo.sec.gov/firm/summary/312421",
-    "matchReason": "Strong pattern: 'capital management llc'"
-  },
   "304640": {
     "firmName": "PAMPLONA CAPITAL MANAGEMENT (MONACO) SAM",
     "crd": "304640",
@@ -57191,6 +56970,14 @@
     "sourceLink": "https://www.adviserinfo.sec.gov/firm/summary/148186",
     "matchReason": "Strong pattern: 'capital management llc'"
   },
+  "172505": {
+    "firmName": "VISION KNIGHT CAPITAL MANAGEMENT COMPANY LIMITED",
+    "crd": "172505",
+    "city": "GRAND CAYMAN",
+    "state": "",
+    "sourceLink": "https://www.adviserinfo.sec.gov/firm/summary/172505",
+    "matchReason": "Strong pattern: 'capital management'"
+  },
   "169282": {
     "firmName": "SOMERSET CAPITAL MANAGEMENT SINGAPORE PTE. LTD.",
     "crd": "169282",
@@ -57237,14 +57024,6 @@
     "city": "SINGAPORE",
     "state": "",
     "sourceLink": "https://www.adviserinfo.sec.gov/firm/summary/162310",
-    "matchReason": "Strong pattern: 'capital management'"
-  },
-  "172505": {
-    "firmName": "VISION KNIGHT CAPITAL MANAGEMENT COMPANY LIMITED",
-    "crd": "172505",
-    "city": "GRAND CAYMAN",
-    "state": "",
-    "sourceLink": "https://www.adviserinfo.sec.gov/firm/summary/172505",
     "matchReason": "Strong pattern: 'capital management'"
   },
   "291551": {
@@ -57351,6 +57130,14 @@
     "sourceLink": "https://www.adviserinfo.sec.gov/firm/summary/160587",
     "matchReason": "Strong pattern: 'capital management'"
   },
+  "109077": {
+    "firmName": "AXA ROSENBERG INVESTMENT MANAGEMENT LLC",
+    "crd": "109077",
+    "city": "ORINDA",
+    "state": "CA",
+    "sourceLink": "https://www.adviserinfo.sec.gov/firm/summary/109077",
+    "matchReason": "Strong pattern: 'investment management'"
+  },
   "155557": {
     "firmName": "AMERICAN PORTFOLIO MANAGEMENT, LLC",
     "crd": "155557",
@@ -57359,6 +57146,14 @@
     "sourceLink": "https://www.adviserinfo.sec.gov/firm/summary/155557",
     "matchReason": "Score 15: management llc"
   },
+  "309016": {
+    "firmName": "DBA/ AUSTIN FIXED INCOME CONSULTING AND INVESTMENT MANAGEMENT",
+    "crd": "309016",
+    "city": "BEE CAVE",
+    "state": "TX",
+    "sourceLink": "https://www.adviserinfo.sec.gov/firm/summary/309016",
+    "matchReason": "Strong pattern: 'investment management'"
+  },
   "166676": {
     "firmName": "ALLOMETRIC RESEARCH AND MANAGEMENT, LLC",
     "crd": "166676",
@@ -57366,6 +57161,14 @@
     "state": "TX",
     "sourceLink": "https://www.adviserinfo.sec.gov/firm/summary/166676",
     "matchReason": "Score 15: management llc"
+  },
+  "109192": {
+    "firmName": "WELLS FARGO ASSET MANAGEMENT (INTERNATIONAL), LLC",
+    "crd": "109192",
+    "city": "LONDON",
+    "state": "",
+    "sourceLink": "https://www.adviserinfo.sec.gov/firm/summary/109192",
+    "matchReason": "Strong pattern: 'asset management'"
   },
   "281054": {
     "firmName": "RIDGELINE FINANCIAL MANAGEMENT, LLC",
@@ -57391,6 +57194,14 @@
     "sourceLink": "https://www.adviserinfo.sec.gov/firm/summary/321619",
     "matchReason": "Strong pattern: 'capital lp'"
   },
+  "327936": {
+    "firmName": "TWIN DOVS CAPITAL MANAGEMENT LP",
+    "crd": "327936",
+    "city": "NEW YORK",
+    "state": "NY",
+    "sourceLink": "https://www.adviserinfo.sec.gov/firm/summary/327936",
+    "matchReason": "Strong pattern: 'capital management lp'"
+  },
   "285525": {
     "firmName": "ALLEGIANT REAL ESTATE CAPITAL, LP",
     "crd": "285525",
@@ -57398,6 +57209,46 @@
     "state": "NY",
     "sourceLink": "https://www.adviserinfo.sec.gov/firm/summary/285525",
     "matchReason": "Strong pattern: 'capital lp'"
+  },
+  "286126": {
+    "firmName": "CROSS STONE CAPITAL MANAGEMENT LP",
+    "crd": "286126",
+    "city": "PURCHASE",
+    "state": "NY",
+    "sourceLink": "https://www.adviserinfo.sec.gov/firm/summary/286126",
+    "matchReason": "Strong pattern: 'capital management lp'"
+  },
+  "174751": {
+    "firmName": "BEIJING SINUOBO CAPITAL MANAGEMENT LTD",
+    "crd": "174751",
+    "city": "CHAOYANG DISTRICT, BEIJING",
+    "state": "",
+    "sourceLink": "https://www.adviserinfo.sec.gov/firm/summary/174751",
+    "matchReason": "Strong pattern: 'capital management ltd'"
+  },
+  "119715": {
+    "firmName": "GOLD LEAF CAPITAL MANAGEMENT, INC.",
+    "crd": "119715",
+    "city": "WILLOWICK",
+    "state": "OH",
+    "sourceLink": "https://www.adviserinfo.sec.gov/firm/summary/119715",
+    "matchReason": "Strong pattern: 'capital management'"
+  },
+  "111738": {
+    "firmName": "GRAND JEAN CAPITAL MANAGEMENT INC.",
+    "crd": "111738",
+    "city": "SAN FRANCISCO",
+    "state": "CA",
+    "sourceLink": "https://www.adviserinfo.sec.gov/firm/summary/111738",
+    "matchReason": "Strong pattern: 'capital management'"
+  },
+  "282514": {
+    "firmName": "INCEPTION CAPITAL MANAGEMENT LLC",
+    "crd": "282514",
+    "city": "KIRKLAND",
+    "state": "WA",
+    "sourceLink": "https://www.adviserinfo.sec.gov/firm/summary/282514",
+    "matchReason": "Strong pattern: 'capital management llc'"
   },
   "289088": {
     "firmName": "SILVER MOUNT CAPITAL LIMITED",
@@ -57566,6 +57417,22 @@
     "state": "FL",
     "sourceLink": "https://www.adviserinfo.sec.gov/firm/summary/298630",
     "matchReason": "Score 15: management llc"
+  },
+  "129708": {
+    "firmName": "FINANCIAL SERVICES CENTER ASSET MANAGEMENT INC.",
+    "crd": "129708",
+    "city": "RED HOOK",
+    "state": "NY",
+    "sourceLink": "https://www.adviserinfo.sec.gov/firm/summary/129708",
+    "matchReason": "Strong pattern: 'asset management'"
+  },
+  "311510": {
+    "firmName": "BOMBARDIER GLOBAL PENSION ASSET MANAGEMENT INC.",
+    "crd": "311510",
+    "city": "DORVAL, QUEBEC",
+    "state": "",
+    "sourceLink": "https://www.adviserinfo.sec.gov/firm/summary/311510",
+    "matchReason": "Strong pattern: 'asset management'"
   },
   "112061": {
     "firmName": "TACTICAL GLOBAL MANAGEMENT LIMITED",
